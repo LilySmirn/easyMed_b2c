@@ -12,6 +12,120 @@
     <meta property="og:url" content="https://klinreki-mkb10.ru/" />
     <meta property="og:image" content="https://klinreki-mkb10.ru/preview.jpg" />
 
+    <!-- JSON LD -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@graph": [
+                {
+                    "@type": "WebSite",
+                    "@id": "https://klinreki-mkb10.ru/#website",
+                    "url": "https://klinreki-mkb10.ru/",
+                    "name": "Клинические рекомендации Минздрава по МКБ-10",
+                    "description": "Быстрый доступ к актуальным клиническим рекомендациям Минздрава РФ 2024-2025 по МКБ-10. Удобный интерфейс, поиск, тарифы.",
+                    "publisher": {
+                        "@id": "https://klinreki-mkb10.ru/#organization"
+                    }
+                },
+                {
+                    "@type": "Organization",
+                    "@id": "https://klinreki-mkb10.ru/#organization",
+                    "name": "EasyMed",
+                    "url": "https://klinreki-mkb10.ru/",
+                    "logo": {
+                        "@type": "ImageObject",
+                        "url": "https://klinreki-mkb10.ru/assets/images/logo.png",
+                        "width": 250,
+                        "height": 60,
+                        "caption": "Клинические рекомендации Минздрава — логотип"
+                    },
+                    "contactPoint": [
+                        {
+                            "@type": "ContactPoint",
+                            "email": "info@easymed.pro",
+                            "contactType": "customer support",
+                            "availableLanguage": ["Russian", "English"]
+                        }
+                    ],
+                    "sameAs": [
+                        "https://t.me/easymed_support"
+                    ]
+                },
+                {
+                    "@type": "OfferCatalog",
+                    "@id": "https://klinreki-mkb10.ru/#offers",
+                    "name": "Тарифы на подписку",
+                    "itemListElement": [
+                        {
+                            "@type": "Offer",
+                            "itemOffered": {
+                                "@type": "Service",
+                                "name": "Базовый",
+                                "description": "Подписка на 1 месяц"
+                            },
+                            "price": "300",
+                            "priceCurrency": "RUB",
+                            "priceValidUntil": "2025-12-31",
+                            "url": "https://klinreki-mkb10.ru/#pricing",
+                            "eligibleDuration": {
+                                "@type": "Duration",
+                                "duration": "P1M"
+                            }
+                        },
+                        {
+                            "@type": "Offer",
+                            "itemOffered": {
+                                "@type": "Service",
+                                "name": "Оптимальный",
+                                "description": "Подписка на 3 месяца"
+                            },
+                            "price": "750",
+                            "priceCurrency": "RUB",
+                            "priceValidUntil": "2025-12-31",
+                            "url": "https://klinreki-mkb10.ru/#pricing",
+                            "eligibleDuration": {
+                                "@type": "Duration",
+                                "duration": "P3M"
+                            }
+                        },
+                        {
+                            "@type": "Offer",
+                            "itemOffered": {
+                                "@type": "Service",
+                                "name": "Расширенный",
+                                "description": "Подписка на 6 месяцев"
+                            },
+                            "price": "1200",
+                            "priceCurrency": "RUB",
+                            "priceValidUntil": "2025-12-31",
+                            "url": "https://klinreki-mkb10.ru/#pricing",
+                            "eligibleDuration": {
+                                "@type": "Duration",
+                                "duration": "P6M"
+                            }
+                        },
+                        {
+                            "@type": "Offer",
+                            "itemOffered": {
+                                "@type": "Service",
+                                "name": "Профи",
+                                "description": "Подписка на 12 месяцев"
+                            },
+                            "price": "1800",
+                            "priceCurrency": "RUB",
+                            "priceValidUntil": "2025-12-31",
+                            "url": "https://klinreki-mkb10.ru/#pricing",
+                            "eligibleDuration": {
+                                "@type": "Duration",
+                                "duration": "P1Y"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    </script>
+
     <title>Клинические рекомендации Минздрава по МКБ-10 — удобный справочник</title>
     <link rel="stylesheet" href="styles.css" />
 </head>
