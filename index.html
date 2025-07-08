@@ -16,12 +16,12 @@
     <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <header id="site-header" class="header-section">
+    <header id="site-header" class="header-section" role="banner">
         <div class="header-container">
             <a href="/" class="logo-link">
-                <img src="assets/images/logo.png" alt="Логотип Клинических рекомендаций Минздрава МКБ-10" />
+                <img src="assets/images/logo.png" alt="Клинические рекомендации Минздрава — логотип" />
             </a>
-            <nav>
+            <nav role="navigation" aria-label="Главное меню">
                 <ul class="main-menu">
                     <li><a href="#about">О проекте</a></li>
                     <li><a href="#pricing">Тарифы</a></li>
@@ -43,9 +43,9 @@
                             Клинические рекомендации Минздрава РФ
                         </h1>
                         <p class="lead-text">
-                            Актуальный справочник, созданный для врачей,
-                            клиник и студентов. Находите рекомендации
-                            по диагнозу, МКБ-10, направлению или
+                            Актуальный справочник, созданный для врачей,<br>
+                            клиник и студентов. Находите рекомендации<br>
+                            по диагнозу, МКБ-10, направлению или<br>
                             ключевым словам — в один клик.
                         </p>
                     </div>
@@ -57,107 +57,383 @@
                     </div>
                 </div>
                 <div class="hero-img">
-                    <img src="assets/images/hero-img.png" alt="main image">
+                    <img src="assets/images/hero-img.png" alt="Клинические рекомендации Минздрава РФ - иллюстрация">
                 </div>
             </div>
         </section>
         <section id="welcome" class="welcome-section">
-            <p>
-                Добро пожаловать в удобный справочник, где собраны актуальные клинические
-                рекомендации по всем нозологиям — от официальных протоколов Минздрава РФ
-                до специализированных подходов для взрослых и детей.
-            </p>
-            <p>
-                Используйте поиск по МКБ-10, фильтры по возрасту,
-                году утверждения или разделам медицины.
-            </p>
+            <div class="welcome-container">
+                <p class="description">
+                    Добро пожаловать в удобный справочник, где собраны актуальные клинические
+                    рекомендации по всем нозологиям — от официальных протоколов Минздрава РФ
+                    до специализированных подходов для взрослых и детей.
+                </p>
+                <p>
+                    Используйте поиск по МКБ-10, фильтры по возрасту,
+                    году утверждения или разделам медицины.
+                </p>
+                <div class="stroke"></div>
+            </div>
         </section>
         <section id="usp" class="usp-section">
-
+            <div class="usp-container">
+                <h2 class="title">
+                   Всё, что нужно врачу, в одном справочнике
+                </h2>
+                <p class="description">
+                    560+ актуальных клинических рекомендаций в удобном формате.
+                </p>
+                <p class="description">
+                    Мы собрали, сократили, отфильтровали — чтобы вы могли сразу работать.
+                </p>
+                <div class="usp-list">
+                    <div class="line-1">
+                        <div class="usp-item">
+                            <p class="item-title">
+                                Клинические<br>рекомендации у детей
+                            </p>
+                            <p class="item-text">
+                                Отдельный модуль для педиатрии,<br>протоколы детских заболеваний.
+                            </p>
+                        </div>
+                        <div class="usp-item">
+                            <p class="item-title">
+                                Поиск по коду<br>МКБ-10
+                            </p>
+                            <p class="item-text">
+                                Поддержка всех разделов<br>и нозологий: J06, I10, K25 и др.
+                            </p>
+                        </div>
+                        <div class="usp-item">
+                            <p class="item-title">
+                                Клинические рекомендации<br>2024 и 2025 годов в работе
+                            </p>
+                            <p class="item-text">
+                                Все документы с пометкой<br>об утверждении и датой.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="line-2">
+                        <div class="usp-item">
+                            <p class="item-title">
+                                Утверждённые Минздравом<br>РФ рекомендации
+                            </p>
+                            <p class="item-text">
+                                Только официальные данные.<br>Обновляются в режиме реального<br>времени
+                            </p>
+                        </div>
+                        <div class="usp-item">
+                            <p class="item-title">
+                                Рубрикатор клинических<br>рекомендаций
+                            </p>
+                            <p class="item-text">
+                                Удобная навигация по темам:<br>кардиология, гастроэнтерология,<br>педиатрия и пр.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
         <section id="clients" class="clients-section">
-
+            <div class="clients-container">
+                <h2 class="title">
+                    Кому и зачем нужен наш справочник?
+                </h2>
+                <div class="clients-list">
+                    <div class="clients-item">
+                        <p class="item-title">
+                            Врачам
+                        </p>
+                        <div class="clients-stroke">
+                        </div>
+                        <p class="item-text">
+                            ✓ Быстрый доступ к протоколам Минздрава РФ<br>✓ Поддержка при диагностике, выборе лечения, оформлении документации<br>✓ Экономия времени и минимизация ошибок
+                        </p>
+                    </div>
+                    <div class="clients-item">
+                        <p class="item-title">
+                            Руководителям<br>клиник
+                        </p>
+                        <div class="clients-stroke">
+                        </div>
+                        <p class="item-text">
+                            ✓ Контроль соответствия клинрекам и стандартам<br>✓ Помощь при проверках страховых, Росздравнадзора<br>✓ Повышение качества медицинской помощи
+                        </p>
+                    </div>
+                    <div class="clients-item">
+                        <p class="item-title">
+                            Студентам и<br>ординаторам
+                        </p>
+                        <div class="clients-stroke">
+                        </div>
+                        <p class="item-text">
+                            ✓ Понимание структуры клинрека с первых курсов<br>✓ Подготовка к экзаменам и практикам<br>✓ Уверенность в действиях при работе с пациентами
+                        </p>
+                    </div>
+                </div>
+            </div>
         </section>
         <section id="pricing" class="pricing-section">
-            <table class="pricing-table" role="table">
-                <thead>
-                <tr>
-                    <th>Тариф</th>
-                    <th>Срок</th>
-                    <th>Цена</th>
-                    <th>Экономия</th>
-                    <th></th> <!-- для кнопки -->
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td>Базовый</td>
-                    <td>1 месяц</td>
-                    <td>300 ₽</td>
-                    <td>—</td>
-                    <td>
-                        <form action="#" method="POST">
-                            <input type="hidden" name="tariff" value="base">
-                            <button type="submit" class="btn-select" aria-label="Выбрать тариф Базовый">Выбрать тариф</button>
-                        </form>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Оптимальный</td>
-                    <td>3 месяца</td>
-                    <td>750 ₽</td>
-                    <td>–150 ₽</td>
-                    <td>
-                        <form action="#" method="POST">
-                            <input type="hidden" name="tariff" value="optimal">
-                            <button type="submit" class="btn-select" aria-label="Выбрать тариф Оптимальный">Выбрать тариф</button>
-                        </form>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Расширенный</td>
-                    <td>6 месяцев</td>
-                    <td>1 200 ₽</td>
-                    <td>–600 ₽</td>
-                    <td>
-                        <form action="#" method="POST">
-                            <input type="hidden" name="tariff" value="extended">
-                            <button type="submit" class="btn-select" aria-label="Выбрать тариф Расширенный">Выбрать тариф</button>
-                        </form>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Профи</td>
-                    <td>12 месяцев</td>
-                    <td>1 800 ₽</td>
-                    <td>–1 800 ₽</td>
-                    <td>
-                        <form action="#" method="POST">
-                            <input type="hidden" name="tariff" value="pro">
-                            <button type="submit" class="btn-select" aria-label="Выбрать тариф Профи">Выбрать тариф</button>
-                        </form>
-                    </td>
-                </tr>
-                </tbody>
-            </table>
-
+            <div class="pricing-container">
+                <h2 class="title">
+                    Тарифы и цены
+                </h2>
+                <table class="pricing-table" role="table">
+                    <thead>
+                    <tr>
+                        <th>Тариф</th>
+                        <th>Срок</th>
+                        <th>Цена</th>
+                        <th>Экономия</th>
+                        <th></th> <!-- для кнопки -->
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Базовый</td>
+                        <td>1 месяц</td>
+                        <td>300 ₽</td>
+                        <td>—</td>
+                        <td>
+                            <form action="#" method="POST">
+                                <input type="hidden" name="tariff" value="base">
+                                <button type="submit" class="btn-select" aria-label="Выбрать тариф Базовый">Выбрать тариф</button>
+                            </form>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Оптимальный</td>
+                        <td>3 месяца</td>
+                        <td>750 ₽</td>
+                        <td>–150 ₽</td>
+                        <td>
+                            <form action="#" method="POST">
+                                <input type="hidden" name="tariff" value="optimal">
+                                <button type="submit" class="btn-select" aria-label="Выбрать тариф Оптимальный">Выбрать тариф</button>
+                            </form>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Расширенный</td>
+                        <td>6 месяцев</td>
+                        <td>1 200 ₽</td>
+                        <td>–600 ₽</td>
+                        <td>
+                            <form action="#" method="POST">
+                                <input type="hidden" name="tariff" value="extended">
+                                <button type="submit" class="btn-select" aria-label="Выбрать тариф Расширенный">Выбрать тариф</button>
+                            </form>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Профи</td>
+                        <td>12 месяцев</td>
+                        <td>1 800 ₽</td>
+                        <td>–1 800 ₽</td>
+                        <td>
+                            <form action="#" method="POST">
+                                <input type="hidden" name="tariff" value="pro">
+                                <button type="submit" class="btn-select" aria-label="Выбрать тариф Профи">Выбрать тариф</button>
+                            </form>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
         </section>
         <section id="corporate-access" class="corporate-access-section">
-
+            <div class="corporate-access-container">
+                <h2 class="title">
+                    Нужен корпоративный доступ?
+                </h2>
+                <p class="description">
+                    Для клиник и медцентров действуют отдельные условия — напишите нам.
+                </p>
+                <button class="contact-button">
+                    Оставить заявку
+                </button>
+            </div>
         </section>
         <section id="faq" class="faq-section">
-
+            <div class="faq-container">
+                <h2 class="title">
+                    Часто задаваемые вопросы
+                </h2>
+                <p class="description">
+                    Ответы на наиболее частые вопросы от наших пользователей
+                </p>
+                <div class="faq-content">
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false" aria-controls="faq1-answer" id="faq1-button">
+                            <span>Можно ли отменить автосписание денежных средств в любое время?</span>
+                            <img src="assets/images/faq-icon.png" class="faq-icon" alt="иконка">
+                        </button>
+                        <div class="faq-answer">
+                            Да, автосписание можно отключить в личном кабинете в разделе «Тарифы» доступна кнопка «Отписаться».
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Как оформить подписку на сайт?</span>
+                            <img src="assets/images/faq-icon.png" class="faq-icon" alt="иконка">
+                        </button>
+                        <div class="faq-answer">
+                            Перейдите в раздел «Тарифы», выберите нужный вариант и нажмите кнопку «Оплатить тариф». После оплаты вы получите мгновенный доступ ко всем материалам. Дата окончания подписки будет отображаться в личном кабинете.
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Что будет включать подписка на сайт?</span>
+                            <img src="assets/images/faq-icon.png" class="faq-icon" alt="иконка">
+                        </button>
+                        <div class="faq-answer">
+                            <p>
+                                Подписка открывает доступ к:
+                            </p>
+                            <ul>
+                                <li>Всем актуальным клиническим рекомендациям</li>
+                                <li>Ежемесячным обновлениям и новым публикациям</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>На основе каких источников представлена информация?</span>
+                            <img src="assets/images/faq-icon.png" class="faq-icon" alt="иконка">
+                        </button>
+                        <div class="faq-answer">
+                            Мы создаём сокращённые клинреки на основе официальных клинических рекомендаций и медико-экономических стандартов Минздрава РФ
+                            (<a href="https://cr.minzdrav.gov.ru" target="_blank" rel="noopener noreferrer">сайт Минздрава РФ</a>).
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Будут ли добавляться и обновляться рекомендации?</span>
+                            <img src="assets/images/faq-icon.png" class="faq-icon" alt="иконка">
+                        </button>
+                        <div class="faq-answer">
+                            Да, мы ежемесячно добавляем новые рекомендации и материалы по запросам пользователей.<br>
+                            Обновления существующих клинреков проводятся при выходе новых утверждённых версий от Минздрава. <strong><em>Все обновления входят в стоимость подписки.</em></strong>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Можно ли пользоваться сайтом без подписки?</span>
+                            <img src="assets/images/faq-icon.png" class="faq-icon" alt="иконка">
+                        </button>
+                        <div class="faq-answer">
+                            Да, на сайте есть часть полезных материалов в открытом доступе.<br>
+                            Однако полный доступ ко всем клиническим рекомендациям и функциям требует подписки.
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Куда писать, если возникли технические проблемы?</span>
+                            <img src="assets/images/faq-icon.png" class="faq-icon" alt="иконка">
+                        </button>
+                        <div class="faq-answer">
+                            <p>
+                                Свяжитесь с нами — мы поможем в ближайшее время:
+                            </p>
+                            <ul>
+                                <li><strong>Email: </strong><a href="mailto:info@easymed.pro">info@easymed.pro</a></li>
+                                <li><strong>Telegram: </strong><a href="https://t.me/easymed_support" target="_blank" rel="noopener noreferrer">@easymed_support</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
         <section id="cta" class="cta-section">
-
+            <div class="cta-container">
+                <h2 class="title cta-title">
+                    Попробуйте бесплатно прямо сейчас!
+                </h2>
+                <a href="#" class="btn btn-demo">Демо</a>
+            </div>
         </section>
         <section id="why-us" class="why-us-section">
-
+            <div class="why-us-container">
+                <h2 class="title cta-title">
+                    Почему сайт <a href="#" class="btn-demo">Klinreki-mkb10.ru</a> — лучший выбор?
+                </h2>
+            </div>
+            <ul class="why-us-list">
+                <li class="why-us-item">
+                    ✓ Ориентирован на МКБ-10 и практическое применение
+                </li>
+                <li class="why-us-item">
+                    ✓ Структура рекомендаций под реальные задачи врача
+                </li>
+                <li class="why-us-item">
+                    ✓ Постоянно обновляется и развивается
+                </li>
+                <li class="why-us-item">
+                    ✓ Уже помогает десяткам клиник по всей России
+                </li>
+            </ul>
+        </section>
+        <section class="cta-banner">
+            <div class="cta-banner-container">
+                <h2 class="title cta-banner-title">
+                    Если вы ищете
+                </h2>
+                <ul class="cta-banner-list">
+                    <li class="cta-banner-item">
+                        Краткие, удобные клинические рекомендации Минздрава
+                    </li>
+                    <li class="why-us-item">
+                        Возможность быстро ориентироваться по МКБ-10
+                    </li>
+                    <li class="why-us-item">
+                        Актуальные данные без лишней теории
+                    </li>
+                </ul>
+                <h2 class="title cta-banner-title">
+                    Вы по адресу
+                </h2>
+                <h2 class="title">
+                    <a href="#" class="btn-demo">Klinreki-mkb10.ru</a> - ваш надёжный справочник
+                </h2>
+            </div>
         </section>
     </main>
-
     <footer id="site-footer" class="footer">
+        <div class="footer-container">
 
+            <section class="footer-nav" aria-labelledby="footer-nav-heading">
+                <h2 id="footer-nav-heading" class="visually-hidden">Навигация</h2>
+                <a href="/" class="footer-logo-link">
+                    <img src="assets/images/logo-white.png" alt="Клинические рекомендации Минздрава — логотип" />
+                </a>
+                <nav>
+                    <ul class="footer-menu">
+                        <li><a href="#about">О проекте</a></li>
+                        <li><a href="#pricing">Тарифы</a></li>
+                    </ul>
+                </nav>
+                <div class="footer-buttons">
+                    <a href="#" class="btn btn-login">Войти</a>
+                    <a href="#" class="btn btn-demo">Demo</a>
+                </div>
+            </section>
+
+            <section class="footer-contacts" aria-labelledby="footer-contacts-heading">
+                <h2 id="footer-contacts-heading" class="visually-hidden">Контакты</h2>
+                <ul>
+                    <li><strong>Email: </strong><a href="mailto:info@easymed.pro">info@easymed.pro</a></li>
+                    <li><strong>Telegram: </strong><a href="https://t.me/easymed_support" target="_blank" rel="noopener noreferrer">@easymed_support</a></li>
+                </ul>
+            </section>
+
+            <section class="footer-legal" aria-labelledby="footer-legal-heading">
+                <h2 id="footer-legal-heading" class="visually-hidden">Правовая информация</h2>
+                <ul>
+                    <li><a href="/privacy-policy">Политика конфиденциальности</a></li>
+                </ul>
+                <p>© 2025 easymed.pro</p>
+            </section>
+        </div>
     </footer>
 
     <script src="script.js"></script>
