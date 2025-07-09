@@ -260,8 +260,12 @@ h1 {
     z-index: 1;
 }
 
-.description .highlight {
+.highlight {
     color: #0085FF;
+}
+
+.bold {
+    font-weight: bold;
 }
 
 hr {
@@ -273,6 +277,64 @@ hr {
     border-top: 1px solid #BADEFF;
 }
 
+h2 {
+    all: unset;
+    display: block;
+    font-family: "Segoe UI", sans-serif;
+    font-size: 40px;
+    margin-bottom: 18px;
+}
+
+.usp-section {
+    min-height: 540px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.usp-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.line-1, .line-2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 18px;
+}
+
+.line-1 {
+    margin-bottom: 30px;
+    margin-top: 40px;
+}
+
+.usp-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.item-title {
+    font-family: "Segoe UI", sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: #000000;
+    text-align: center;
+    line-height: 110%;
+}
+
+.usp-item-title {
+    background-color: #BADEFF;
+    padding: 6px 25px;
+    border-radius: 25px;
+    margin-bottom: 12px;
+}
 
 .faq-question {
     background: none;
