@@ -230,7 +230,7 @@ h1 {
 }
 
 .welcome-section {
-    height: 227px;
+    height: 280px;
     background-color: #ffffff;
     display: flex;
     justify-content: center;
@@ -252,10 +252,10 @@ h1 {
 
 .description {
     font-family: "Segoe UI", sans-serif;
-    font-size: 20px;
-    line-height: 1.1;
+    font-size: 24px;
+    line-height: 130%;
     color: #000000;
-    margin-bottom: 8px;
+    margin-bottom: 15px;
     text-align: center;
     z-index: 1;
 }
@@ -286,7 +286,7 @@ h2 {
 }
 
 .usp-section {
-    min-height: 540px;
+    min-height: 650px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -301,18 +301,19 @@ h2 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 50px;
 }
 
 .line-1, .line-2 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 18px;
+    gap: 50px;
 }
 
 .line-1 {
-    margin-bottom: 30px;
     margin-top: 40px;
+    max-width: 1200px;
 }
 
 .usp-item {
@@ -320,9 +321,17 @@ h2 {
     flex-direction: column;
 }
 
+.usp-item-text {
+    font-family: "Segoe UI", sans-serif;
+    font-size: 18px;
+    color: #000000;
+    line-height: 130%;
+    text-align: center;
+}
+
 .item-title {
     font-family: "Segoe UI", sans-serif;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: bold;
     color: #000000;
     text-align: center;
@@ -334,6 +343,77 @@ h2 {
     padding: 6px 25px;
     border-radius: 25px;
     margin-bottom: 12px;
+    font-weight: 600;
+    font-size: 22px;
+}
+
+.clients-section {
+    height: 550px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clients-container {
+    background-image: url("assets/images/bg-clients-section-left.png"), url("assets/images/bg-clients-section-right.png");
+    background-position: top left, bottom right;
+    background-repeat: no-repeat, no-repeat;
+    background-size: auto, auto;
+    width: 1400px;
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.clients-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 25px;
+}
+
+.clients-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.clients-item-title {
+    width: 220px;
+    text-align: right;
+    align-self: flex-start;
+    margin-top: 5px;
+    font-size: 20px;
+}
+
+.vertical-line {
+    width: 1px;
+    height: 75px;
+    background-color: #BADEFF;
+    margin: 0 18px 0 28px;
+}
+
+.item-text {
+    font-family: "Segoe UI", sans-serif;
+    font-size: 18px;
+    font-weight: normal;
+    color: #000000;
+    text-align: left;
+    line-height: 160%;
+    width: 650px;
+}
+
+.pricing-section {
+    height: 630px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .faq-question {
