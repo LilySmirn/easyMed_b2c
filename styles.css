@@ -1,3 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    background: #f9f9f9;
+    font-family: "Segoe UI", sans-serif;
+    text-align: center;
+    flex-direction: column;
+}
+
+html {
+    height: 100%;
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+button, input, textarea, select {
+    font: inherit;
+}
+
+main {
+    width: 100%;
+    max-width: 1200px;
+    padding-top: 90px;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #fff;
+    box-shadow: none;
+    transition: box-shadow 0.3s ease;
+
+    /* Убираем max-width и margin: auto */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 85px;
+}
+
+.header-container {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+header.scrolled {
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+.main-menu {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+.main-menu a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: 400;
+    position: relative;
+    transition: color 0.2s ease;
+    font-family: "Segoe UI", sans-serif, normal;
+    font-size: 20px;
+}
+
+.main-menu a.active {
+    font-weight: 600;
+    color: #000;
+}
+
+.main-menu a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0;
+    height: 2px;
+    background-color: #0085FF;
+    transition: width 0.3s ease;
+}
+
+.main-menu a:hover::after {
+    width: 100%;
+}
+
+.btn {
+    text-decoration: none;
+}
+
+.btn-login {
+    font-family: sans-serif, "Segoe UI Semibold";
+    font-size: 20px;
+    color: #000000;
+    margin-right: 24px;
+}
+
+.btn-login:hover {
+    text-decoration: none;
+    color: #0085FF;
+}
+
+.btn-demo {
+    font-family: sans-serif, "Segoe UI Semibold";
+    font-size: 20px;
+    color: #ffffff;
+    background-color: #0085FF;
+    width: 152px;
+    height: 50px;
+    padding: 15px 70px;
+    border-radius: 5px;
+}
 
 .faq-question {
     background: none;
@@ -42,4 +173,13 @@
     overflow: hidden;
     clip: rect(0, 0, 0, 0);
     border: 0;
+}
+
+main,
+section,
+footer {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
