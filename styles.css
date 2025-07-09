@@ -429,6 +429,7 @@ tr {
 }
 
 table {
+    margin-top: 44px;
     width: 100%;
     border-collapse: collapse;
 }
@@ -452,6 +453,26 @@ table {
     text-decoration: none;
     background-color: #0065C2;
     cursor: pointer;
+}
+
+.corporate-access-section {
+    height: 320px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-button {
+    font-family: "Segoe UI Semibold", sans-serif;
+    font-size: 23px;
+    color: #ffffff;
+    background-color: #0085FF;
+    border: none;
+    width: 335px;
+    height: 65px;
+    border-radius: 10px;
+    margin-top: 15px;
 }
 
 .faq-question {
