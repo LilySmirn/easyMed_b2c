@@ -29,8 +29,7 @@ button, input, textarea, select {
 
 main {
     width: 100%;
-    max-width: 1200px;
-    padding-top: 90px;
+    max-width: 1400px;
 }
 
 header {
@@ -42,8 +41,6 @@ header {
     background-color: #fff;
     box-shadow: none;
     transition: box-shadow 0.3s ease;
-
-    /* Убираем max-width и margin: auto */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -51,23 +48,29 @@ header {
 }
 
 .header-container {
-    max-width: 1200px;
+    max-width: 1400px;
     width: 100%;
     display: flex;
+    padding: 0 20px;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
+    position: relative;
+}
+
+.navigation {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 header.scrolled {
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-
 .main-menu {
     list-style: none;
     display: flex;
-    gap: 2rem;
+    gap: 4rem;
     margin: 0;
     padding: 0;
     align-items: center;
@@ -145,7 +148,7 @@ header.scrolled {
 
 .hero-container {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1400px;
     height: 100%;
     margin: 0 auto;
     padding: 0 20px;
@@ -155,13 +158,13 @@ header.scrolled {
 }
 
 .hero-img {
-    width: 520px;
-    height: 356px;
+    width: 50%;
+
 }
 
 .hero-img img {
-    max-width: 520px;
-    max-height: 356px;
+    max-width: 100%;
+    max-height: 100%;
 }
 
 .hero-content {
@@ -226,6 +229,51 @@ h1 {
     background-color: #D8EDFF;
 }
 
+.welcome-section {
+    height: 227px;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: stretch; /* важно */
+}
+
+.welcome-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* центрируем блок <p> */
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 20px;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.description {
+    font-family: "Segoe UI", sans-serif;
+    font-size: 20px;
+    line-height: 1.1;
+    color: #000000;
+    margin-bottom: 8px;
+    text-align: center;
+    z-index: 1;
+}
+
+.description .highlight {
+    color: #0085FF;
+}
+
+hr {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border: none;
+    border-top: 1px solid #BADEFF;
+}
+
+
 .faq-question {
     background: none;
     border: none;
@@ -277,5 +325,6 @@ footer {
     width: 100%;
     max-width: 100%;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0;
 }
+
