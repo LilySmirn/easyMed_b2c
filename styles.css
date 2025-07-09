@@ -409,11 +409,49 @@ h2 {
 }
 
 .pricing-section {
-    height: 630px;
+    height: 700px;
     background-color: white;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.pricing-container {
+    width: 1400px;
+}
+
+tr {
+    font-family: "Segoe UI", sans-serif;
+    font-size: 25px;
+    height: 110px;
+    text-align: center;
+    width: 1400px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table-bg {
+    background-color: #F0F8FF;
+}
+
+.btn-select {
+    font-family: "Segoe UI Semibold", sans-serif;
+    font-size: 23px;
+    color: #ffffff;
+    background-color: #0085FF;
+    border: none;
+    width: 220px;
+    height: 65px;
+    border-radius: 10px;
+}
+
+.btn-select:hover {
+    text-decoration: none;
+    background-color: #0065C2;
+    cursor: pointer;
 }
 
 .faq-question {
