@@ -579,6 +579,45 @@ table {
     display: block;
 }
 
+.cta-section {
+    background-color: #0085FF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 375px;
+    background-image: url('assets/images/bg-cta-banner-section-large.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: auto 100%;
+    overflow: hidden;
+}
+
+.cta-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cta-title {
+    color: white;
+}
+
+.btn-demo-cta {
+    font-family: "Segoe UI Semibold", sans-serif;
+    font-size: 23px;
+    color: #0085FF;
+    background-color: #ffffff;
+    border: none;
+    width: 335px;
+    height: 66px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
 .visually-hidden {
     position: absolute;
     width: 1px;
