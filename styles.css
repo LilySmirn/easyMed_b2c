@@ -234,13 +234,13 @@ h1 {
     background-color: #ffffff;
     display: flex;
     justify-content: center;
-    align-items: stretch; /* важно */
+    align-items: stretch
 }
 
 .welcome-container {
     display: flex;
     flex-direction: column;
-    justify-content: center; /* центрируем блок <p> */
+    justify-content: center;
     align-items: center;
     height: 100%;
     width: 100%;
@@ -708,6 +708,139 @@ table {
     overflow: hidden;
     clip: rect(0, 0, 0, 0);
     border: 0;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0085FF;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 1400px;
+    height: 300px;
+    background-color: #0085FF;
+}
+
+.footer-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 120px;
+    position: relative;
+    padding: 0 20px;
+}
+
+.footer-logo-link,
+.footer-buttons {
+    z-index: 1;
+}
+
+.footer-menu {
+    position: absolute;
+    left: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding-left: 0;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.footer-menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    margin: 0 16px;
+    position: relative;
+}
+
+.footer-menu a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background: white;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease-in-out;
+}
+
+.footer-menu a:hover::after {
+    transform: scaleX(1);
+}
+
+.footer-btn-login {
+    font-family: sans-serif, "Segoe UI Semibold";
+    font-size: 20px;
+    color: #ffffff;
+    cursor: pointer;
+    padding: 24px;
+}
+
+.footer-btn-login:hover {
+    text-decoration: none;
+    color: #D8EDFF;
+}
+
+.footer-btn-demo {
+    font-family: sans-serif, "Segoe UI Semibold";
+    font-size: 20px;
+    color: #0085FF;
+    background-color: white;
+    width: 152px;
+    height: 50px;
+    padding: 15px 70px;
+    border-radius: 5px;
+}
+
+.footer-btn-demo:hover {
+    text-decoration: none;
+    background-color: #D8EDFF;
+}
+
+.footer-contact-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 40px;
+}
+
+.footer-contact-list li {
+    font-family: "Segoe UI", sans-serif;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+
+.footer-contact-list li a {
+    text-decoration: none;
+    color: white;
+}
+
+.footer-contacts {
+    position: relative;
+}
+
+.footer-legal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px 15px 20px;
+    color: white;
+}
+
+.legal-link a {
+    text-decoration: none;
+    color: white;
 }
 
 main,
