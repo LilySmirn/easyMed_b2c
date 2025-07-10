@@ -663,6 +663,42 @@ table {
     line-height: 200%;
 }
 
+.cta-banner {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 375px;
+    background-image: url('assets/images/bg-cta-banner.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: auto 100%;
+    overflow: hidden;
+}
+
+.cta-banner-title {
+    font-family: "Segoe UI", sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    color: #0085FF;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.cta-banner-list {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 16px;
+}
+
+.cta-banner-item {
+    color: black;
+    font-family: "Segoe UI", sans-serif;
+    font-size: 20px;
+    line-height: 160%;
+}
+
 .visually-hidden {
     position: absolute;
     width: 1px;
