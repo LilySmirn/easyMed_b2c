@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru-RU">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta name="description" content="Быстрый доступ к актуальным клиническим рекомендациям Минздрава РФ 2024-2025 по МКБ-10. Удобный интерфейс, поиск, тарифы.">
-    <link rel="canonical" href="https://klinreki-mkb10.ru/" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Клинические рекомендации по МКБ-10" />
-    <meta property="og:description" content="Актуальный справочник клинических рекомендаций Минздрава РФ по МКБ-10." />
-    <meta property="og:url" content="https://klinreki-mkb10.ru/" />
-    <meta property="og:image" content="https://klinreki-mkb10.ru/preview.jpg" />
+    <link rel="canonical" href="https://klinreki-mkb10.ru/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Клинические рекомендации по МКБ-10">
+    <meta property="og:description" content="Актуальный справочник клинических рекомендаций Минздрава РФ по МКБ-10.">
+    <meta property="og:url" content="https://klinreki-mkb10.ru/">
+    <meta property="og:image" content="https://klinreki-mkb10.ru/preview.jpg">
 
     <!-- JSON LD -->
     <script type="application/ld+json">
@@ -127,15 +127,15 @@
     </script>
 
     <title>Клинические рекомендации Минздрава по МКБ-10 — удобный справочник</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header id="site-header" class="header-section" role="banner">
+    <header id="site-header" class="header-section">
         <div class="header-container">
             <a href="/" class="logo-link">
-                <img src="assets/images/logo.png" alt="Клинические рекомендации Минздрава — логотип" />
+                <img src="assets/images/logo.png" alt="Клинические рекомендации Минздрава — логотип">
             </a>
-            <nav role="navigation" aria-label="Главное меню" class="navigation">
+            <nav aria-label="Главное меню" class="navigation">
                 <ul class="main-menu">
                     <li><a href="#about">О проекте</a></li>
                     <li><a href="#pricing">Тарифы</a></li>
@@ -176,7 +176,7 @@
             </div>
         </section>
         <section id="about" class="welcome-section">
-            <h2 class="visually-hidden"></h2>
+            <h2 class="visually-hidden">Welcome section</h2>
             <div class="welcome-container">
                 <p class="description">
                     Добро пожаловать в удобный справочник, где собраны актуальные <span class="highlight">клинические</span><br><span class="highlight">рекомендации</span> по всем нозологиям — от официальных протоколов Минздрава РФ<br>до специализированных подходов для взрослых и детей.
@@ -297,7 +297,7 @@
                 <h2 class="title">
                     Тарифы и <span class="highlight">цены</span>
                 </h2>
-                <table class="pricing-table" role="table">
+                <table class="pricing-table">
                     <thead>
                     <tr class="table-bg">
                         <th>Тариф</th>
@@ -387,25 +387,25 @@
                             <span>Можно ли отменить автосписание денежных средств в любое время?</span>
                             <img src="assets/images/faq-icon.png" class="faq-icon" alt="иконка">
                         </button>
-                        <div class="faq-answer">
+                        <div class="faq-answer" id="faq1-answer">
                             Да, автосписание можно отключить в личном кабинете в разделе «Тарифы» доступна кнопка «Отписаться».
                         </div>
                     </div>
                     <div class="faq-item">
-                        <button class="faq-question">
+                        <button class="faq-question" aria-expanded="false" aria-controls="faq2-answer" id="faq2-button">
                             <span>Как оформить подписку на сайт?</span>
                             <img src="assets/images/faq-icon.png" class="faq-icon" alt="иконка">
                         </button>
-                        <div class="faq-answer">
+                        <div class="faq-answer" id="faq2-answer">
                             Перейдите в раздел «Тарифы», выберите нужный вариант и нажмите кнопку «Оплатить тариф». После оплаты вы получите мгновенный доступ ко всем материалам. Дата окончания подписки будет отображаться в личном кабинете.
                         </div>
                     </div>
                     <div class="faq-item">
-                        <button class="faq-question">
+                        <button class="faq-question" aria-expanded="false" aria-controls="faq3-answer" id="faq3-button">
                             <span>Что будет включать подписка на сайт?</span>
                             <img src="assets/images/faq-icon.png" class="faq-icon" alt="иконка">
                         </button>
-                        <div class="faq-answer">
+                        <div class="faq-answer" id="faq3-answer">
                             <p>
                                 Подписка открывает доступ к:
                             </p>
@@ -416,41 +416,41 @@
                         </div>
                     </div>
                     <div class="faq-item">
-                        <button class="faq-question">
+                        <button class="faq-question" aria-expanded="false" aria-controls="faq4-answer" id="faq4-button">
                             <span>На основе каких источников представлена информация?</span>
                             <img src="assets/images/faq-icon.png" class="faq-icon" alt="иконка">
                         </button>
-                        <div class="faq-answer">
+                        <div class="faq-answer" id="faq4-answer">
                             Мы создаём сокращённые клинреки на основе официальных клинических рекомендаций и медико-экономических стандартов Минздрава РФ
                             (<a href="https://cr.minzdrav.gov.ru" target="_blank" rel="noopener noreferrer">сайт Минздрава РФ</a>).
                         </div>
                     </div>
                     <div class="faq-item">
-                        <button class="faq-question">
+                        <button class="faq-question" aria-expanded="false" aria-controls="faq5-answer" id="faq5-button">
                             <span>Будут ли добавляться и обновляться рекомендации?</span>
                             <img src="assets/images/faq-icon.png" class="faq-icon" alt="иконка">
                         </button>
-                        <div class="faq-answer">
+                        <div class="faq-answer" id="faq5-answer">
                             Да, мы ежемесячно добавляем новые рекомендации и материалы по запросам пользователей.<br>
                             Обновления существующих клинреков проводятся при выходе новых утверждённых версий от Минздрава.<br><strong><em>Все обновления входят в стоимость подписки.</em></strong>
                         </div>
                     </div>
                     <div class="faq-item">
-                        <button class="faq-question">
+                        <button class="faq-question" aria-expanded="false" aria-controls="faq6-answer" id="faq6-button">
                             <span>Можно ли пользоваться сайтом без подписки?</span>
                             <img src="assets/images/faq-icon.png" class="faq-icon" alt="иконка">
                         </button>
-                        <div class="faq-answer">
+                        <div class="faq-answer" id="faq6-answer">
                             Да, на сайте есть часть полезных материалов в открытом доступе.<br>
                             Однако полный доступ ко всем клиническим рекомендациям и функциям требует подписки.
                         </div>
                     </div>
                     <div class="faq-item">
-                        <button class="faq-question">
+                        <button class="faq-question" aria-expanded="false" aria-controls="faq7-answer" id="faq7-button">
                             <span>Куда писать, если возникли технические проблемы?</span>
                             <img src="assets/images/faq-icon.png" class="faq-icon" alt="иконка">
                         </button>
-                        <div class="faq-answer">
+                        <div class="faq-answer" id="faq7-answer">
                             <p>
                                 Свяжитесь с нами — мы поможем в ближайшее время:
                             </p>
@@ -463,6 +463,7 @@
                 </div>
             </div>
         </section>
+
         <section id="cta" class="cta-section">
             <div class="cta-container">
                 <h2 class="title cta-title">
@@ -522,7 +523,7 @@
             <section class="footer-nav" aria-labelledby="footer-nav-heading">
                 <h2 id="footer-nav-heading" class="visually-hidden">Навигация</h2>
                 <a href="#" class="footer-logo-link">
-                    <img src="assets/images/logo-white.png" alt="Клинические рекомендации Минздрава — логотип" />
+                    <img src="assets/images/logo-white.png" alt="Клинические рекомендации Минздрава — логотип">
                 </a>
                 <nav>
                     <ul class="footer-menu">
