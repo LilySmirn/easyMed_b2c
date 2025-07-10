@@ -185,7 +185,8 @@ header.scrolled {
 
 h1 {
     font-size: 40px;
-    font-family: "Segoe UI", sans-serif, semibold;
+    font-family: "Segoe UI", sans-serif;
+    font-weight: 600;
     color: #004889;
     text-align: left;
     line-height: 110%;
@@ -199,6 +200,7 @@ h1 {
     line-height: 130%;
     text-align: left;
     margin-bottom: 30px;
+    margin-top: 30px;
 }
 
 .btn-hero-demo {
