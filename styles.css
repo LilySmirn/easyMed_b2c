@@ -475,6 +475,12 @@ table {
     margin-top: 15px;
 }
 
+.contact-button:hover {
+    text-decoration: none;
+    background-color: #0065C2;
+    cursor: pointer;
+}
+
 .faq-section {
     background-color: white;
     display: flex;
@@ -616,6 +622,45 @@ table {
     justify-content: center;
     align-items: center;
     border-radius: 10px;
+}
+
+.btn-demo-cta:hover {
+    text-decoration: none;
+    background-color: #D8EDFF;
+}
+
+.why-us-section {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    padding: 20px 0 0 0;
+}
+
+.why-us-btn {
+    font-family: "Segoe UI Semibold", sans-serif;
+    font-size: 40px;
+    text-decoration: none;
+    color: #0085FF;
+}
+
+.why-us-btn:hover {
+    text-decoration: none;
+    color: #0065C2;
+}
+
+.why-us-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.why-us-item {
+    font-size: 22px;
+    font-family: "Segoe UI", sans-serif;
+    text-align: left;
+    line-height: 200%;
 }
 
 .visually-hidden {
