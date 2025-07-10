@@ -12,26 +12,24 @@ window.addEventListener("scroll", () => {
     header.classList.toggle("scrolled", window.scrollY > 10);
 });
 
-// выделение пунктов меню жирным
-window.addEventListener('scroll', () => {
-    let currentSectionIndex = 0;
-
-    sections.forEach((section, index) => {
-        if (!section) return;
-        const rect = section.getBoundingClientRect();
-
-        if (rect.top <= window.innerHeight / 2) {
-            currentSectionIndex = index;
-        }
-    });
-
-    links.forEach(link => link.classList.remove('active'));
-    if (links[currentSectionIndex]) {
-        links[currentSectionIndex].classList.add('active');
-    }
-});
-
-// window.dispatchEvent(new Event('scroll'));
+// // выделение пунктов меню жирным
+// window.addEventListener('scroll', () => {
+//     let currentSectionIndex = 0;
+//
+//     sections.forEach((section, index) => {
+//         if (!section) return;
+//         const rect = section.getBoundingClientRect();
+//
+//         if (rect.top <= window.innerHeight / 2) {
+//             currentSectionIndex = index;
+//         }
+//     });
+//
+//     links.forEach(link => link.classList.remove('active'));
+//     if (links[currentSectionIndex]) {
+//         links[currentSectionIndex].classList.add('active');
+//     }
+// });
 
 //свернуть-развернуть faq
 faqItems.forEach((item) => {
@@ -41,3 +39,6 @@ faqItems.forEach((item) => {
         item.classList.toggle('active');
     });
 });
+
+
+

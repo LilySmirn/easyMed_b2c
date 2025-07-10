@@ -127,8 +127,7 @@
     </script>
 
     <title>Клинические рекомендации Минздрава по МКБ-10 — удобный справочник</title>
-    <link rel="stylesheet" href="styles.css" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="styles.css"></noscript>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header id="site-header" class="header-section">
@@ -170,7 +169,7 @@
                     </div>
                     <div class="hero-buttons">
                         <a href="#" class="btn btn-hero-demo">Найти рекомендации</a>
-                        <button class="btn btn-pricing">
+                        <button class="btn btn-pricing" onclick="location.hash = 'pricing'">
                             Приобрести подписку
                         </button>
                     </div>
@@ -222,7 +221,7 @@
                                 Поиск по коду<br>МКБ-10
                             </p>
                             <p class="usp-item-text">
-                                Поддержка всех разделов<br>и нозологий: J06, I10, K25 и др.
+                                Поддержка всех разделов<br>и нозологий.
                             </p>
                         </div>
                         <div class="usp-item">
@@ -443,7 +442,7 @@
                             </picture>
                         </button>
                         <div class="faq-answer" id="faq4-answer">
-                            Мы создаём сокращённые клинреки на основе официальных клинических рекомендаций и медико-экономических стандартов Минздрава РФ
+                            Мы создаём сокращённые клинреки на основе официальных клинических рекомендаций Минздрава РФ
                             (<a href="https://cr.minzdrav.gov.ru" target="_blank" rel="noopener noreferrer">сайт Минздрава РФ</a>).
                         </div>
                     </div>
@@ -567,7 +566,7 @@
                 </nav>
                 <div class="footer-buttons">
                     <a href="#" class="btn footer-btn-login">Войти</a>
-                    <a href="#" class="btn footer-btn-demo">Demo</a>
+                    <a href="#" class="btn footer-btn-demo">Демо</a>
                 </div>
             </section>
 
