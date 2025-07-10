@@ -34,7 +34,7 @@
                     "url": "https://klinreki-mkb10.ru/",
                     "logo": {
                         "@type": "ImageObject",
-                        "url": "https://klinreki-mkb10.ru/assets/images/logo.png",
+                        "url": "https://klinreki-mkb10.ru/assets/images/logo.webp",
                         "width": 250,
                         "height": 60,
                         "caption": "Клинические рекомендации Минздрава — логотип"
@@ -127,14 +127,19 @@
     </script>
 
     <title>Клинические рекомендации Минздрава по МКБ-10 — удобный справочник</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="styles.css"></noscript>
 </head>
 <body>
     <header id="site-header" class="header-section">
         <div class="header-container">
             <a href="/" class="logo-link">
-                <img src="assets/images/logo.png" alt="Клинические рекомендации Минздрава — логотип">
+                <picture>
+                    <source srcset="assets/images/logo.webp" type="image/webp">
+                    <img src="assets/images/logo.png" alt="Клинические рекомендации Минздрава — логотип" width="101" height="43" loading="eager">
+                </picture>
             </a>
+
             <nav aria-label="Главное меню" class="navigation">
                 <ul class="main-menu">
                     <li><a href="#about">О проекте</a></li>
@@ -171,8 +176,12 @@
                     </div>
                 </div>
                 <div class="hero-img">
-                    <img src="assets/images/hero-img.png" alt="Клинические рекомендации Минздрава РФ - иллюстрация">
+                    <picture>
+                        <source srcset="assets/images/hero-img.webp" type="image/webp">
+                        <img src="assets/images/hero-img.png" alt="Клинические рекомендации Минздрава РФ - иллюстрация" width="638" height="441.5" loading="lazy">
+                    </picture>
                 </div>
+
             </div>
         </section>
         <section id="about" class="welcome-section">
@@ -385,7 +394,10 @@
                     <div class="faq-item">
                         <button class="faq-question" aria-expanded="false" aria-controls="faq1-answer" id="faq1-button">
                             <span>Можно ли отменить автосписание денежных средств в любое время?</span>
-                            <img src="assets/images/faq-icon.png" class="faq-icon" alt="иконка">
+                            <picture>
+                                <source srcset="assets/images/faq-icon.webp" type="image/webp">
+                                <img src="assets/images/faq-icon.png" class="faq-icon" alt="иконка" loading="lazy" width="25" height="10">
+                            </picture>
                         </button>
                         <div class="faq-answer" id="faq1-answer">
                             Да, автосписание можно отключить в личном кабинете в разделе «Тарифы» доступна кнопка «Отписаться».
@@ -394,7 +406,10 @@
                     <div class="faq-item">
                         <button class="faq-question" aria-expanded="false" aria-controls="faq2-answer" id="faq2-button">
                             <span>Как оформить подписку на сайт?</span>
-                            <img src="assets/images/faq-icon.png" class="faq-icon" alt="иконка">
+                            <picture>
+                                <source srcset="assets/images/faq-icon.webp" type="image/webp">
+                                <img src="assets/images/faq-icon.png" class="faq-icon" alt="иконка" width="25" height="10" loading="lazy">
+                            </picture>
                         </button>
                         <div class="faq-answer" id="faq2-answer">
                             Перейдите в раздел «Тарифы», выберите нужный вариант и нажмите кнопку «Оплатить тариф». После оплаты вы получите мгновенный доступ ко всем материалам. Дата окончания подписки будет отображаться в личном кабинете.
@@ -403,7 +418,10 @@
                     <div class="faq-item">
                         <button class="faq-question" aria-expanded="false" aria-controls="faq3-answer" id="faq3-button">
                             <span>Что будет включать подписка на сайт?</span>
-                            <img src="assets/images/faq-icon.png" class="faq-icon" alt="иконка">
+                            <picture>
+                                <source srcset="assets/images/faq-icon.webp" type="image/webp">
+                                <img src="assets/images/faq-icon.png" class="faq-icon" alt="иконка" width="25" height="10" loading="lazy">
+                            </picture>
                         </button>
                         <div class="faq-answer" id="faq3-answer">
                             <p>
@@ -416,9 +434,13 @@
                         </div>
                     </div>
                     <div class="faq-item">
+
                         <button class="faq-question" aria-expanded="false" aria-controls="faq4-answer" id="faq4-button">
                             <span>На основе каких источников представлена информация?</span>
-                            <img src="assets/images/faq-icon.png" class="faq-icon" alt="иконка">
+                            <picture>
+                                <source srcset="assets/images/faq-icon.webp" type="image/webp">
+                                <img src="assets/images/faq-icon.png" class="faq-icon" alt="иконка" width="25" height="10" loading="lazy">
+                            </picture>
                         </button>
                         <div class="faq-answer" id="faq4-answer">
                             Мы создаём сокращённые клинреки на основе официальных клинических рекомендаций и медико-экономических стандартов Минздрава РФ
@@ -428,7 +450,10 @@
                     <div class="faq-item">
                         <button class="faq-question" aria-expanded="false" aria-controls="faq5-answer" id="faq5-button">
                             <span>Будут ли добавляться и обновляться рекомендации?</span>
-                            <img src="assets/images/faq-icon.png" class="faq-icon" alt="иконка">
+                            <picture>
+                                <source srcset="assets/images/faq-icon.webp" type="image/webp">
+                                <img src="assets/images/faq-icon.png" class="faq-icon" alt="иконка" width="25" height="10" loading="lazy">
+                            </picture>
                         </button>
                         <div class="faq-answer" id="faq5-answer">
                             Да, мы ежемесячно добавляем новые рекомендации и материалы по запросам пользователей.<br>
@@ -438,7 +463,10 @@
                     <div class="faq-item">
                         <button class="faq-question" aria-expanded="false" aria-controls="faq6-answer" id="faq6-button">
                             <span>Можно ли пользоваться сайтом без подписки?</span>
-                            <img src="assets/images/faq-icon.png" class="faq-icon" alt="иконка">
+                            <picture>
+                                <source srcset="assets/images/faq-icon.webp" type="image/webp">
+                                <img src="assets/images/faq-icon.png" class="faq-icon" alt="иконка" width="25" height="10" loading="lazy">
+                            </picture>
                         </button>
                         <div class="faq-answer" id="faq6-answer">
                             Да, на сайте есть часть полезных материалов в открытом доступе.<br>
@@ -448,7 +476,10 @@
                     <div class="faq-item">
                         <button class="faq-question" aria-expanded="false" aria-controls="faq7-answer" id="faq7-button">
                             <span>Куда писать, если возникли технические проблемы?</span>
-                            <img src="assets/images/faq-icon.png" class="faq-icon" alt="иконка">
+                            <picture>
+                                <source srcset="assets/images/faq-icon.webp" type="image/webp">
+                                <img src="assets/images/faq-icon.png" class="faq-icon" alt="иконка" width="25" height="10" loading="lazy">
+                            </picture>
                         </button>
                         <div class="faq-answer" id="faq7-answer">
                             <p>
@@ -523,7 +554,10 @@
             <section class="footer-nav" aria-labelledby="footer-nav-heading">
                 <h2 id="footer-nav-heading" class="visually-hidden">Навигация</h2>
                 <a href="#" class="footer-logo-link">
-                    <img src="assets/images/logo-white.png" alt="Клинические рекомендации Минздрава — логотип">
+                    <picture>
+                        <source srcset="assets/images/logo-white.webp" type="image/webp">
+                        <img src="assets/images/logo-white.png" alt="Клинические рекомендации Минздрава — логотип" width="101" height="43" loading="eager">
+                    </picture>
                 </a>
                 <nav>
                     <ul class="footer-menu">
@@ -556,6 +590,6 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </body>
 </html>
