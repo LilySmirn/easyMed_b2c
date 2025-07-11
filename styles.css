@@ -638,6 +638,25 @@ table {
     background-color: #D8EDFF;
 }
 
+.video-section {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /*height: 500px;*/
+    padding: 20px;
+}
+
+.video {
+    height: 405px;
+    margin-top: 35px;
+}
+
+.video-container {
+    margin-top: 50px;
+}
+
 .why-us-section {
     background-color: white;
     display: flex;
