@@ -8,6 +8,35 @@ body, html {
     height: 100%;
 }
 
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+.hero-img img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.hero-container,
+.welcome-container,
+.usp-container,
+.clients-container,
+.pricing-container,
+.corporate-access-container,
+.faq-container,
+.cta-container,
+.video-container,
+.why-us-container,
+.cta-banner-container,
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
 body {
     display: flex;
     min-height: 100vh;
@@ -58,9 +87,14 @@ header {
 }
 
 .navigation {
+    display: block;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
+}
+
+.mobile-nav {
+    display: none;
 }
 
 header.scrolled {
@@ -884,3 +918,111 @@ footer {
     padding: 0;
 }
 
+
+@media (max-width: 768px) {
+    .navigation {
+        display: none;
+    }
+
+    .header-buttons {
+        display: none;
+    }
+
+    .mobile-nav {
+        display: block;
+    }
+
+    .hero-section {
+        height: auto;
+    }
+
+    .hero-container {
+        flex-direction: column;
+        justify-content: center;
+        gap: 40px;
+        height: auto;
+        padding: 50px 20px 50px 20px;
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 30px;
+    }
+
+    .hero-content {
+        align-items: center;
+    }
+
+    .lead-text {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .btn-hero-demo {
+        display: inline-block;
+        width: 162px;
+        height: 50px;
+        font-size: 18px;
+        border-radius: 10px;
+        text-align: center;
+        line-height: 100%;
+        padding: 5px;
+        margin-top: 0;
+    }
+
+    .btn-pricing {
+        font-size: 16px;
+        height: 50px;
+        width: 162px;
+    }
+
+    .description {
+        font-size: 18px;
+    }
+
+    .welcome-section {
+        height: auto;
+        padding: 50px 20px;
+    }
+
+    hr {
+        display: none;
+    }
+
+    h2 {
+        text-align: center;
+        font-size: 30px;
+    }
+
+    .usp-container {
+        padding: 0 20px 50px 20px;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .usp-list {
+        gap: 30px;
+    }
+
+    .line-1, .line-2 {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .usp-item-title {
+        width: 290px;
+        font-size: 17px;
+    }
+
+    .usp-item-text {
+        font-size: 17px;
+    }
+
+    .clients-container {
+        padding: 0 20px 50px 20px;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+}
