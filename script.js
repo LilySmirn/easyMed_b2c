@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         });
 
-        // закрытие енб при клике вне
+        // закрытие меню при клике вне
         document.addEventListener('click', (event) => {
             const isClickInsideMenu = mobileMenu.contains(event.target);
             const isClickOnBurger = burgerBtn.contains(event.target);

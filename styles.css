@@ -239,14 +239,14 @@ h1 {
 
 .btn-hero-demo {
     display: flex;
-    align-items: center;         /* вертикальное центрирование */
-    justify-content: center;     /* горизонтальное центрирование */
+    align-items: center;
+    justify-content: center;
     font-family: sans-serif, "Segoe UI Semibold";
     font-size: 18px;
     color: #ffffff;
     background-color: #0085FF;
-    padding: 0 28px;              /* только горизонтальный паддинг */
-    height: 66px;                 /* фиксируем высоту */
+    padding: 0 28px;
+    height: 66px;
     border-radius: 10px;
     text-align: center;
     text-decoration: none;
@@ -1297,7 +1297,7 @@ footer {
         transition: transform 0.4s ease, opacity 0.4s ease;
         display: flex;
         flex-direction: column;
-        pointer-events: none; /* блокируем клики, когда скрыто */
+        pointer-events: none;
     }
 
     .mobile-menu.active {
