@@ -571,7 +571,7 @@ table {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    width: 1000px;
+    width: 100%;
     padding: 0 10px;
     border-bottom: 1px solid #BADEFF;
 }
@@ -585,6 +585,7 @@ table {
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    max-width: 1200px;
     padding: 15px 0 15px 0;
     background-color: #f5f5f5;
     border: none;
@@ -821,9 +822,9 @@ html, body {
     position: relative;
 }
 
-* {
-    outline: 1px solid red !important;
-}
+/** {*/
+/*    outline: 1px solid red !important;*/
+/*}*/
 
 .footer-logo-link,
 .footer-buttons {
@@ -951,6 +952,10 @@ footer {
     align-items: center;
 }
 
+.pricing-mobile {
+    display: none;
+}
+
 
 @media (max-width: 768px) {
     .navigation {
@@ -1074,11 +1079,98 @@ footer {
         font-size: 17px;
     }
 
+    .clients-section {
+        height: auto;
+    }
+
     .clients-container {
         padding: 0 20px 50px 20px;
         display: flex;
         flex-direction: column;
         width: 100%;
+        height: auto;
+    }
+
+    .clients-item {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .clients-item-title {
+        width: 100%;
+        text-align: center;
+        align-self: center;
+        margin-top: 5px;
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .vertical-line {
+        display: none;
+    }
+
+    .item-text {
+        width: 100%;
+        text-align: center;
+    }
+
+    .pricing-section {
+        height: auto;
+    }
+
+    .pricing-table {
+        display: none;
+    }
+
+    .pricing-mobile {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .pricing-item {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 15px 0 25px 0;
+    ;
+    }
+
+    .pricing-item-title {
+        font-family: "Segoe UI", sans-serif;
+        font-size: 22px;
+        text-align: center;
+        font-weight: 700;
+    }
+
+    .pricing-conditions {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 380px;
+        font-size: 25px;
+        gap: 25px;
+        margin: 0 0 10px 0;
+    }
+
+    .price {
+        font-weight: bold;
+    }
+
+    .bg-blue {
+        background: #F0F8FF;
+    }
+
+    .faq-question {
+        text-align: left;
     }
 
     .faq-item {
