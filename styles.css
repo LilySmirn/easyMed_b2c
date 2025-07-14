@@ -1346,4 +1346,45 @@ footer {
     html {
         scroll-behavior: smooth;
     }
+
+    .footer {
+        height: auto;
+    }
+
+    .footer-container {
+        height: auto;
+    }
+
+    .footer-nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 150px;
+        margin: 35px;
+    }
+
+    .footer-btn-demo {
+        padding: 10px 60px;
+    }
+
+    .footer-contacts {
+        margin-top: 10px;
+        border-bottom: 1px solid #ffffff;
+
+    }
+
+    .footer-contact-list {
+        margin-bottom: 20px;
+    }
+
+    #contact {
+        height: auto;
+    }
+
+    .footer-legal {
+        padding: 20px;
+        flex-direction: column;
+        gap: 10px;
+    }
 }
