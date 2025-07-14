@@ -198,7 +198,7 @@ header.scrolled {
 }
 
 .hero-img {
-    width: 50%;
+    min-width: 50%;
 }
 
 .hero-img img {
@@ -238,13 +238,20 @@ h1 {
 }
 
 .btn-hero-demo {
+    display: flex;
+    align-items: center;         /* вертикальное центрирование */
+    justify-content: center;     /* горизонтальное центрирование */
     font-family: sans-serif, "Segoe UI Semibold";
     font-size: 18px;
     color: #ffffff;
     background-color: #0085FF;
-    padding: 22px 28px;
+    padding: 0 28px;              /* только горизонтальный паддинг */
+    height: 66px;                 /* фиксируем высоту */
     border-radius: 10px;
-    margin-top: 30px;
+    text-align: center;
+    text-decoration: none;
+    line-height: 1.2;
+    text-wrap: balance;
 }
 
 .btn-hero-demo:hover {
@@ -402,7 +409,8 @@ h2 {
     background-position: top left, bottom right;
     background-repeat: no-repeat, no-repeat;
     background-size: auto, auto;
-    width: 1400px;
+    max-width: 1400px;
+    width: 100%;
     height: 550px;
     display: flex;
     flex-direction: column;
@@ -459,7 +467,8 @@ h2 {
 }
 
 .pricing-container {
-    width: 1400px;
+    max-width: 1400px;
+    width: 100%;
 }
 
 tr {
@@ -541,13 +550,15 @@ table {
     background-position: top left, bottom right;
     background-repeat: no-repeat, no-repeat;
     background-size: auto, auto;
-    width: 1400px;
+    max-width: 1400px;
+    width: 100%;
     position: relative;
     padding-bottom: 50px;
 }
 
 .faq-content {
-    width: 1400px;
+    max-width: 1400px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -784,7 +795,8 @@ footer {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    width: 1400px;
+    max-width: 1400px;
+    width: 100%;
     height: 300px;
     background-color: #0085FF;
 }
@@ -796,6 +808,21 @@ footer {
     height: 120px;
     position: relative;
     padding: 0 20px;
+}
+
+html, body {
+    overflow-x: hidden;
+}
+
+.page-wrapper {
+    max-width: 100%;
+    overflow-x: hidden;
+    margin: 0 auto;
+    position: relative;
+}
+
+* {
+    outline: 1px solid red !important;
 }
 
 .footer-logo-link,
@@ -918,6 +945,12 @@ footer {
     padding: 0;
 }
 
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 
 @media (max-width: 768px) {
     .navigation {
@@ -945,12 +978,27 @@ footer {
     }
 
     h1 {
-        text-align: center;
         font-size: 30px;
+        text-align: center;
+        max-width: 100%;
+        word-break: break-word;
+        overflow-wrap: break-word;
+        white-space: normal;
     }
 
     .hero-content {
         align-items: center;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .hero-buttons {
+        display: flex;
+        gap: 10px;
+    }
+
+    .hero-img {
+        width: 90%;
     }
 
     .lead-text {
@@ -958,9 +1006,16 @@ footer {
         text-align: center;
     }
 
+    .btn-demo,
+    .footer-btn-demo {
+        padding: 10px 20px;
+        width: auto;
+        max-width: 100%;
+    }
+
     .btn-hero-demo {
         display: inline-block;
-        width: 162px;
+        width: 150px;
         height: 50px;
         font-size: 18px;
         border-radius: 10px;
@@ -971,9 +1026,9 @@ footer {
     }
 
     .btn-pricing {
-        font-size: 16px;
+        width: 150px;
+        margin-left: 0;
         height: 50px;
-        width: 162px;
     }
 
     .description {
@@ -1023,6 +1078,10 @@ footer {
         padding: 0 20px 50px 20px;
         display: flex;
         flex-direction: column;
+        width: 100%;
+    }
+
+    .faq-item {
         width: 100%;
     }
 }
