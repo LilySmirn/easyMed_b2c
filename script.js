@@ -1,44 +1,101 @@
-const header = document.querySelector("header");
-const links = document.querySelectorAll('.main-menu a');
-const faqItems = document.querySelectorAll('.faq-item');
+document.addEventListener('DOMContentLoaded', function () {
+    const header = document.querySelector("header");
+    const faqItems = document.querySelectorAll('.faq-item');
+    const links = document.querySelectorAll('.main-menu a');
+    const burgerBtn = document.querySelector('.burger-btn');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const mobileLinks = mobileMenu.querySelectorAll('a[href^="#"]');
+    const overlay = document.querySelector('.overlay');
 
-const sections = Array.from(links).map(link => {
-    const id = link.getAttribute('href').substring(1);
-    return document.getElementById(id);
-});
+    links.forEach(link => {
+        link.addEventListener('click', (e) => {
+            const href = link.getAttribute('href');
+            if (href && href.startsWith('#')) {
+                e.preventDefault();
+                const targetId = href.substring(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+        });
+    });
 
-//залипание хедера
-window.addEventListener("scroll", () => {
-    header.classList.toggle("scrolled", window.scrollY > 10);
-});
+    function closeMobileMenu() {
+        burgerBtn.classList.remove('active');
+        mobileMenu.classList.remove('active');
+        overlay?.classList.remove('active');
+        overlay?.classList.add('hidden');
+    }
 
-// // выделение пунктов меню жирным
-// window.addEventListener('scroll', () => {
-//     let currentSectionIndex = 0;
-//
-//     sections.forEach((section, index) => {
-//         if (!section) return;
-//         const rect = section.getBoundingClientRect();
-//
-//         if (rect.top <= window.innerHeight / 2) {
-//             currentSectionIndex = index;
-//         }
-//     });
-//
-//     links.forEach(link => link.classList.remove('active'));
-//     if (links[currentSectionIndex]) {
-//         links[currentSectionIndex].classList.add('active');
-//     }
-// });
+    function openMobileMenu() {
+        burgerBtn.classList.add('active');
+        mobileMenu.classList.add('active');
+        overlay?.classList.remove('hidden');
+        setTimeout(() => overlay?.classList.add('active'), 10);
+    }
 
-//свернуть-развернуть faq
-faqItems.forEach((item) => {
-    const question = item.querySelector('.faq-question');
+    if (burgerBtn && mobileMenu) {
+        burgerBtn.addEventListener('click', () => {
+            const isActive = burgerBtn.classList.contains('active');
+            if (isActive) {
+                closeMobileMenu();
+            } else {
+                openMobileMenu();
+            }
+        });
 
-    question.addEventListener('click', () => {
-        item.classList.toggle('active');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = link.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+
+                if (targetElement) {
+                    targetElement.scrollIntoView({ behavior: 'smooth' });
+                }
+
+                // Закрытие меню после прокрутки
+                setTimeout(() => {
+                    closeMobileMenu();
+                }, 600);
+            });
+        });
+
+        // закрытие енб при клике вне
+        document.addEventListener('click', (event) => {
+            const isClickInsideMenu = mobileMenu.contains(event.target);
+            const isClickOnBurger = burgerBtn.contains(event.target);
+            const isClickOnOverlay = overlay?.contains(event.target);
+
+            if (!isClickInsideMenu && !isClickOnBurger && !isClickOnOverlay) {
+                closeMobileMenu();
+            }
+        });
+
+        // закрытие по escape
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape') {
+                closeMobileMenu();
+            }
+        });
+
+        // затемнение фона в бургере
+        overlay?.addEventListener('click', () => {
+            closeMobileMenu();
+        });
+    }
+
+    // залипание хедера
+    window.addEventListener("scroll", () => {
+        header.classList.toggle("scrolled", window.scrollY > 10);
+    });
+
+    // развернуть faq
+    faqItems.forEach((item) => {
+        const question = item.querySelector('.faq-question');
+        question?.addEventListener('click', () => {
+            item.classList.toggle('active');
+        });
     });
 });
-
-
-
