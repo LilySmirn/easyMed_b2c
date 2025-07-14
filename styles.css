@@ -1176,4 +1176,36 @@ footer {
     .faq-item {
         width: 100%;
     }
+
+    .video {
+        height: auto;
+    }
+
+    .video-section {
+        padding-bottom: 70px;
+    }
+
+    iframe {
+        width: 345px;
+        height: 194px;
+    }
+
+    .why-us-section {
+        height: auto;
+        padding-bottom: 50px;
+    }
+
+    .why-us-item {
+        text-align: center;
+        line-height: 130%;
+        margin-bottom: 10px;
+    }
+
+    .cta-banner {
+        height: auto;
+    }
+
+    .cta-banner-title-2 {
+        padding: 20px 0;
+    }
 }
