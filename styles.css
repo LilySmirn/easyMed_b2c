@@ -5,7 +5,11 @@
 }
 
 body, html {
-    height: 100%;
+    /*height: 100%;*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 .header-container {
@@ -39,15 +43,14 @@ body, html {
 
 body {
     display: flex;
-    min-height: 100vh;
-    background: #f9f9f9;
+    /*min-height: 100vh;*/
     font-family: "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
     text-align: center;
     flex-direction: column;
 }
 
 html {
-    height: 100%;
+    /*height: 100%;*/
     font-size: 16px;
     scroll-behavior: smooth;
 }
@@ -58,14 +61,14 @@ button, input, textarea, select {
 
 main {
     width: 100%;
-    max-width: 1400px;
+    /*max-width: 1400px;*/
 }
 
 header {
     position: fixed;
-    top: 0;
-    left: 0;
     width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
     z-index: 1000;
     background-color: #fff;
     box-shadow: none;
@@ -74,6 +77,15 @@ header {
     justify-content: center;
     align-items: center;
     height: 85px;
+}
+
+.hero-section {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    min-height: 830px;
+    background-color: #F0F8FF;
+    margin-top: 85px;
 }
 
 .header-container {
@@ -181,7 +193,7 @@ header.scrolled {
 
 .hero-section {
     width: 100%;
-    height: 830px;
+    min-height: 830px;
     background-color: #F0F8FF;
     margin-top: 85px;
 }
@@ -278,11 +290,11 @@ h1 {
 }
 
 .welcome-section {
-    height: 280px;
+    min-height: 280px;
     background-color: #ffffff;
     display: flex;
     justify-content: center;
-    align-items: stretch
+    align-items: flex-end;
 }
 
 .welcome-container {
@@ -292,7 +304,7 @@ h1 {
     align-items: center;
     height: 100%;
     width: 100%;
-    max-width: 1200px;
+    max-width: 812px;
     padding: 0 20px;
     position: relative;
     box-sizing: border-box;
@@ -306,6 +318,10 @@ h1 {
     margin-bottom: 15px;
     text-align: center;
     z-index: 1;
+}
+
+.description-2 {
+    margin-bottom: 30px;
 }
 
 .highlight {
@@ -397,7 +413,7 @@ h2 {
 }
 
 .clients-section {
-    height: 550px;
+    min-height: 550px;
     background-color: white;
     display: flex;
     justify-content: center;
@@ -411,7 +427,7 @@ h2 {
     background-size: auto, auto;
     max-width: 1400px;
     width: 100%;
-    height: 550px;
+    min-height: 550px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -459,7 +475,7 @@ h2 {
 }
 
 .pricing-section {
-    height: 700px;
+    min-height: 700px;
     background-color: white;
     display: flex;
     justify-content: center;
@@ -476,7 +492,7 @@ tr {
     font-size: 25px;
     height: 110px;
     text-align: center;
-    width: 1400px;
+    width: auto;
 }
 
 table {
@@ -507,7 +523,7 @@ table {
 }
 
 .corporate-access-section {
-    height: 320px;
+    min-height: 320px;
     background-color: white;
     display: flex;
     justify-content: center;
@@ -567,11 +583,12 @@ table {
 }
 
 .faq-item {
+    width: 100%;
+    max-width: 1200px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
     padding: 0 10px;
     border-bottom: 1px solid #BADEFF;
 }
@@ -646,7 +663,7 @@ table {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 375px;
+    min-height: 375px;
     background-image: url('assets/images/bg-cta-banner-section-large.png');
     background-repeat: no-repeat;
     background-position: center center;
@@ -709,7 +726,7 @@ table {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 400px;
+    min-height: 400px;
     padding: 20px 0 0 0;
 }
 
@@ -743,7 +760,7 @@ table {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 375px;
+    min-height: 375px;
     background-image: url('assets/images/bg-cta-banner.png');
     background-repeat: no-repeat;
     background-position: center center;
@@ -798,7 +815,7 @@ footer {
     align-items: center;
     max-width: 1400px;
     width: 100%;
-    height: 300px;
+    min-height: 300px;
     background-color: #0085FF;
 }
 
@@ -818,7 +835,7 @@ html, body {
 .page-wrapper {
     max-width: 100%;
     overflow-x: hidden;
-    margin: 0 auto;
+    margin: 0;
     position: relative;
 }
 
@@ -921,7 +938,7 @@ html, body {
 }
 
 #contact {
-    height: 114px;
+    min-height: 114px;
 }
 
 .footer-legal {
@@ -996,6 +1013,10 @@ footer {
 
     .hero-section {
         height: auto;
+    }
+
+    .hero-section {
+        min-height: auto;
     }
 
     .hero-container {
@@ -1223,6 +1244,8 @@ footer {
         text-align: center;
         line-height: 130%;
         margin-bottom: 10px;
+        padding-right: 10px;
+        padding-left: 10px;
     }
 
     .cta-banner {
@@ -1286,12 +1309,11 @@ footer {
         right: 0;
         width: 80%;
         max-width: 300px;
-        height: 100%;
+        height: 350px;
         background-color: #fff;
         box-shadow: -2px 0 8px rgba(0, 0, 0, 0.2);
         padding: 2rem 1.5rem;
         z-index: 1000;
-
         transform: translateX(100%);
         opacity: 0;
         transition: transform 0.4s ease, opacity 0.4s ease;
@@ -1355,12 +1377,22 @@ footer {
         height: auto;
     }
 
-    .footer-nav {
+    .footer-menu {
+        position: relative;
         display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+        padding-left: 0;
+    }
+
+    .footer-nav {
+        display: flex    ;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        height: 150px;
+        height: auto;
+        gap: 30px;
         margin: 35px;
     }
 
