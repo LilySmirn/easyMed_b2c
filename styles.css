@@ -98,12 +98,12 @@ header {
     position: relative;
 }
 
-.navigation {
-    display: block;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-}
+/*.navigation {*/
+/*    display: block;*/
+/*    position: absolute;*/
+/*    left: 50%;*/
+/*    transform: translateX(-50%);*/
+/*}*/
 
 .mobile-nav {
     display: none;
