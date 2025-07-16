@@ -1,6 +1,6 @@
 function includeHTML() {
-    const pathToHeader = window.location.pathname.includes('/pages/') ? '../components/header.html' : 'components/header.html';
-    const pathToFooter = window.location.pathname.includes('/pages/') ? '../components/footer.html' : 'components/footer.html';
+    const pathToHeader = window.location.pathname.includes('/pages/') ? '../components/header.html' : './components/header.html';
+    const pathToFooter = window.location.pathname.includes('/pages/') ? '../components/footer.html' : './components/footer.html';
 
     const headerEl = document.getElementById('header');
     const footerEl = document.getElementById('footer');
