@@ -127,56 +127,12 @@
     </script>
 
     <title>Клинические рекомендации Минздрава по МКБ-10 — удобный справочник</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/index.css">
     <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
 </head>
 <body>
     <div class="page-wrapper">
-        <header id="site-header" class="header-section">
-            <div class="header-container">
-            <a href="/" class="logo-link">
-                <picture>
-                    <source srcset="assets/images/logo.webp" type="image/webp">
-                    <img src="assets/images/logo.png" alt="Клинические рекомендации Минздрава — логотип" width="101" height="43" loading="eager">
-                </picture>
-            </a>
-            <nav aria-label="Главное меню" class="navigation">
-                <ul class="main-menu">
-                    <li><a href="#about">О проекте</a></li>
-                    <li><a href="#video">Видео-инструкция</a></li>
-                    <li><a href="#pricing">Тарифы</a></li>
-                    <li><a href="#contact">Контакты</a></li>
-                </ul>
-            </nav>
-            <div class="header-buttons">
-                <a href="#" class="btn btn-login">Войти</a>
-                <a href="#" class="btn btn-demo">Демо</a>
-            </div>
-            <div class="mobile-nav">
-                <button class="burger-btn" aria-label="Открыть меню">
-                    <span class="burger-line"></span>
-                    <span class="burger-line"></span>
-                    <span class="burger-line"></span>
-                </button>
-
-                <div class="mobile-menu">
-                    <nav aria-label="Мобильное меню">
-                        <ul class="mobile-menu-list">
-                            <li><a href="#about">О проекте</a></li>
-                            <li><a href="#video">Видео-инструкция</a></li>
-                            <li><a href="#pricing">Тарифы</a></li>
-                            <li><a href="#contact">Контакты</a></li>
-                        </ul>
-                    </nav>
-                    <div class="mobile-buttons">
-                        <a href="#" class="btn btn-login">Войти</a>
-                        <a href="#" class="btn btn-demo">Демо</a>
-                    </div>
-                </div>
-            </div>
-            <div class="overlay hidden"></div>
-        </div>
-    </header>
+        <div id="header"></div>
     <main class="main">
         <section id="hero" class="hero-section">
             <div class="hero-container">
@@ -654,48 +610,10 @@
             </div>
         </section>
     </main>
-    <footer id="site-footer" class="footer">
-        <div class="footer-container">
-            <section class="footer-nav" aria-labelledby="footer-nav-heading">
-                <h2 id="footer-nav-heading" class="visually-hidden">Навигация</h2>
-                <a href="#" class="footer-logo-link">
-                    <picture>
-                        <source srcset="assets/images/logo-white.webp" type="image/webp">
-                        <img src="assets/images/logo-white.png" alt="Клинические рекомендации Минздрава — логотип" width="101" height="43" loading="eager">
-                    </picture>
-                </a>
-                <nav>
-                    <ul class="footer-menu">
-                        <li><a href="#about">О проекте</a></li>
-                        <li><a href="#pricing">Тарифы</a></li>
-                    </ul>
-                </nav>
-                <div class="footer-buttons">
-                    <a href="#" class="btn footer-btn-login">Войти</a>
-                    <a href="#" class="btn footer-btn-demo">Демо</a>
-                </div>
-            </section>
 
-            <section class="footer-contacts" id="contact" aria-labelledby="footer-contacts-heading">
-                <h2 id="footer-contacts-heading" class="visually-hidden">Контакты</h2>
-                <ul class="footer-contact-list">
-                    <li><strong>Email: </strong><a href="mailto:info@easymed.pro">info@easymed.pro</a></li>
-                    <li><strong>Telegram: </strong><a href="https://t.me/easymed_support" target="_blank" rel="noopener noreferrer">@easymed_support</a></li>
-                </ul>
-                <hr>
-            </section>
-
-            <section class="footer-legal" aria-labelledby="footer-legal-heading">
-                <h2 id="footer-legal-heading" class="visually-hidden">Правовая информация</h2>
-                <div class="legal-link">
-                    <a href="/privacy-policy">Политика конфиденциальности</a>
-                </div>
-                <div>© 2025 easymed.pro</div>
-            </section>
-        </div>
-    </footer>
-
+        <div id="footer"></div>
 </div>
-    <script src="script.js" defer></script>
+    <script src="js/index.js" defer></script>
+    <script src="js/include.js" defer></script>
 </body>
 </html>
