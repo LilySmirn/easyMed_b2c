@@ -114,7 +114,14 @@ input {
     margin: 38px 0;
 }
 
-#remember {
+.checkbox-remember-reg {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+#remember, #remember-reg {
     width: 30px;
     height: 30px;
     margin-right: 10px;

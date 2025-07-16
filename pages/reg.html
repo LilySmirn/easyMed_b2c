@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Регистрация</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/login-reg.css">
+    <!--    <base href="/easyMed_b2c/">-->
+</head>
+<body>
+    <div class="page-wrapper">
+        <div id="header"></div>
+
+        <div class="main-login">
+            <section class="bread-crumbs">
+                <a href="../index.html" class="btn btn-to-main-page">← На главную страницу</a>
+            </section>
+            <section class="login-form-section">
+                <form class="login-form" action="/login" method="POST" novalidate>
+                    <h2>Регистрация</h2>
+                    <div class="login-form-group">
+                        <div class="login-form-input">
+                            <input
+                                    type="text"
+                                    name="firstName"
+                                    placeholder="Имя"
+                                    required
+                                    autocomplete="given-name"
+                            />
+                            <input
+                                    type="text"
+                                    name="lastName"
+                                    placeholder="Фамилия"
+                                    required
+                                    autocomplete="family-name"
+                            />
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="Введите емейл*"
+                                required
+                                autocomplete="username"
+                        />
+
+                        <div class="input-group">
+                            <input
+                                    type="password"
+                                    id="password"
+                                    name="password"
+                                    placeholder="Введите пароль*"
+                                    required
+                                    autocomplete="current-password"
+                            />
+                            <button type="button" class="toggle-password" aria-label="Показать пароль">
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M12 5c-7 0-11 7-11 7s4 7 11 7 11-7 11-7-4-7-11-7zm0 12a5 5 0 1 1 0-10 5 5 0 0 1 0 10z"/>
+                                    <circle cx="12" cy="12" r="2.5"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="input-group">
+                            <input
+                                    type="password"
+                                    name="passwordConfirm"
+                                    placeholder="Повторите пароль*"
+                                    required
+                                    autocomplete="new-password"
+                            />
+                             <button type="button" class="toggle-password" aria-label="Показать пароль">
+                                    <svg viewBox="0 0 24 24">
+                                        <path d="M12 5c-7 0-11 7-11 7s4 7 11 7 11-7 11-7-4-7-11-7zm0 12a5 5 0 1 1 0-10 5 5 0 0 1 0 10z"/>
+                                        <circle cx="12" cy="12" r="2.5"/>
+                                    </svg>
+                                </button>
+                            </div>
+                    </div>
+
+                        <div class="checkbox-remember checkbox-remember-reg">
+                            <div class="checkbox-container">
+                                <input type="checkbox" id="remember" name="remember" />
+                                <label for="remember">Согласие на обработку персональных данных</label>
+                            </div>
+                            <div class="checkbox-container">
+                                <input type="checkbox" id="remember-reg" name="remember" />
+                                <label for="remember">Согласие с политикой конфиденциальности</label>
+                            </div>
+
+                        </div>
+
+                        <button type="submit" class="btn-login-page">Зарегистрироваться</button>
+
+                        <div class="signup-text">
+                            Уже есть аккаунт?<br><a href="../pages/login.html" class="btn-create">Войдите</a>
+                        </div>
+                    </div>
+
+                </form>
+            </section>
+
+        </div>
+
+        <div id="footer"></div>
+    </div>
+
+    <script src="../js/include.js"></script>
+    </body>
+</html>
