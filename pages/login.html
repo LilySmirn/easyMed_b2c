@@ -7,15 +7,73 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/login.css">
 <!--    <base href="/easyMed_b2c/">-->
 </head>
 <body>
-    <div id="header"></div>
-    <div class="main">
+    <div class="page-wrapper">
+        <div id="header"></div>
 
+        <div class="main-login">
+            <section class="bread-crumbs">
+                <a href="../index.html" class="btn btn-to-main-page">← На главную страницу</a>
+            </section>
+            <section class="login-form-section">
+                <form class="login-form" action="/login" method="POST" novalidate>
+                    <h2>Вход</h2>
+                    <div class="login-form-group">
+                        <div class="login-form-input">
+                            <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    placeholder="Введите емейл*"
+                                    required
+                                    autocomplete="username"
+                            />
 
+                            <div class="input-group">
+                                <input
+                                        type="password"
+                                        id="password"
+                                        name="password"
+                                        placeholder="Введите пароль*"
+                                        required
+                                        autocomplete="current-password"
+                                />
+                                <button type="button" class="toggle-password" aria-label="Показать пароль">
+                                    <svg viewBox="0 0 24 24">
+                                        <path d="M12 5c-7 0-11 7-11 7s4 7 11 7 11-7 11-7-4-7-11-7zm0 12a5 5 0 1 1 0-10 5 5 0 0 1 0 10z"/>
+                                        <circle cx="12" cy="12" r="2.5"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="checkbox-remember">
+                            <div class="checkbox-container">
+                                <input type="checkbox" id="remember" name="remember" />
+                                <label for="remember">Запомнить меня на этом компьютере</label>
+                            </div>
+
+                            <a href="/forgot-password" class="forgot-password">Забыли пароль?</a>
+                        </div>
+
+                        <button type="submit" class="btn-login-page">Войти</button>
+
+                        <div class="signup-text">
+                            Впервые на сайте?<br><a href="/signup" class="btn-create">Создайте аккаунт</a>
+                        </div>
+                    </div>
+
+                </form>
+            </section>
+
+        </div>
+
+        <div id="footer"></div>
     </div>
-    <div id="footer"></div>
+
     <script src="../js/include.js"></script>
 </body>
 </html>
