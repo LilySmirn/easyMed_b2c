@@ -1,0 +1,245 @@
+.profile-title {
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 44px;
+}
+
+.profile-title h2 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.logout-link {
+    margin-left: auto;
+    text-decoration: underline;
+    color: #0085FF;
+    font-weight: 500;
+    text-align: right;
+    font-size: 23px;
+}
+
+.profile-table {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.profile-table-title {
+    font-size: 28px;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 49px;
+}
+
+.profile-table-data {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+    gap: 10px;
+    padding: 32px 0 48px 0;
+}
+
+.personal-info, .tariff-info {
+    width: 50%;
+    border-radius: 10px;
+    border: 1px solid #0085FF;
+    background: #F7FBFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    height: 400px;
+}
+
+.personal-info-title {
+    font-size: 26px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.info-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 35px auto 31px auto;
+    gap: 34px;
+}
+
+.info-box-name, .info-box-mail, .info-box-password, .info-box-tariff, .info-box-duration, .info-box-auto {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 36px;
+}
+
+.info-box-title {
+    font-size: 23px;
+    text-align: right;
+    font-weight: normal;
+    width: 112px;
+}
+
+.info-box-text {
+    font-size: 23px;
+    text-align: left;
+    font-weight: normal;
+    width: 300px;
+}
+
+.info-box-value {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 5px;
+}
+
+.info-box-change-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font-size: 20px;
+    color: #0085FF;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#switch-box {
+    width: 94px;
+    height: 40px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 94px;
+    height: 40px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    border-radius: 34px;
+    cursor: pointer;
+    background-color: #D2E2F3;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: 0.4s;
+}
+
+.slider::before {
+    position: absolute;
+    content: "";
+    height: 28px;
+    width: 28px;
+    left: 4px;
+    bottom: 6px;
+    background-color: #AFC9E5;
+    border-radius: 50%;
+    transition: 0.4s;
+}
+
+input:checked + .slider {
+    background-color: #BADEFF;
+}
+
+input:checked + .slider::before {
+    transform: translateX(58px);
+    background-color: #0085FF;
+}
+
+.switch input:focus + .slider {
+    outline: none;
+}
+
+.slider {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.slider {
+    -webkit-tap-highlight-color: transparent;
+}
+
+.info-box-tariff .info-box-title,
+.info-box-duration .info-box-title,
+.info-box-auto .info-box-title {
+    width: 187px;
+}
+
+.info-box-tariff .info-box-text,
+.info-box-duration .info-box-text,
+.info-box-switch {
+    width: 296px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.tariff-link {
+    border: 1px solid #0085FF;
+    background: #ffffff;
+    color: #0085FF;
+    width: 277px;
+    height: 66px;
+    font-size: 23px;
+    text-decoration: none;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    margin-bottom: 35px;
+}
+
+.info-box-password {
+    margin-bottom: 15px;
+}
+
+.open {
+    background: #0085FF;
+    color: #ffffff;
+    width: 277px;
+    height: 66px;
+    font-size: 23px;
+    text-decoration: none;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px
+}
+
+.desktop-icon {
+    margin-top: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 11px;
+    text-decoration: none;
+}
+
+.desktop-icon-text {
+    font-size: 23px;
+    text-align: center;
+    font-weight: 600;
+    text-decoration: none;
+    color: #0085FF;
+
+}

@@ -1,4 +1,4 @@
-.main-login {
+.main-login, .main-reg, .main-profile {
     margin: 85px auto 0 auto;
     height: auto;
     padding: 50px 20px 0 20px;
@@ -9,7 +9,6 @@
     max-width: 1400px;
     width: 100%;
     box-sizing: border-box;
-
 }
 
 .bread-crumbs {
@@ -31,17 +30,17 @@
     color: #0085FF;
 }
 
-.login-form h2 {
+.login-form h2, .reg-form h2, .profile-title h2 {
     text-align: center;
     font-size: 40px;
     font-weight: normal;
 }
 
-.login-form {
+.login-form, .reg-form, .profile {
     padding: 36px 0 110px 0;
 }
 
-.login-form-group {
+.login-form-group, .reg-form-group {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -49,7 +48,7 @@
     height: auto;
 }
 
-.login-form-input {
+.login-form-input, .reg-form-input {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -58,11 +57,17 @@
 }
 
 .login-form input[type="email"],
-.login-form input[type="password"] {
+.reg-form input[type="email"],
+.login-form input[type="password"],
+.reg-form input[type="password"],
+.reg-form input[type="text"] {
     transition: border-color 0.3s;
 }
 .login-form input[type="email"]:focus,
-.login-form input[type="password"]:focus {
+.reg-form input[type="email"]:focus,
+.login-form input[type="password"]:focus,
+.reg-form input[type="password"]:focus,
+.reg-form input[type="text"]:focus {
     border-color: #004788;
     outline: none;
 }
