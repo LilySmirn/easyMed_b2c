@@ -432,6 +432,31 @@
                 <button class="contact-button">
                     Оставить заявку
                 </button>
+
+                <div class="popup-overlay hidden">
+                    <div class="call-popup">
+                        <div class="call-popup__text">
+                            <h2>Корпоративный доступ</h2>
+                            <p>Для клиник и медцентров действуют отдельные условия</p>
+                        </div>
+
+                        <form id="popupForm" class="call-popup__form">
+                            <input type="email" name="email" placeholder="Ваш email" required />
+                            <input type="text" name="name" placeholder="Ваше имя" required />
+                            <input type="tel" name="phone" placeholder="Введите номер телефона" required />
+                            <input type="text" name="crm" placeholder="Название Вашей клиники" />
+
+                            <div class="call-popup__btn">
+                                <button type="submit" class="popup__btn">Отправить</button>
+                            </div>
+                        </form>
+
+                        <div class="call-popup__close">
+                            <img src="./assets/images/popup-exit.png" alt="close">
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </section>
         <section id="faq" class="faq-section">
