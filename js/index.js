@@ -98,7 +98,6 @@ function initHeaderScripts() {
     });
 }
 
-
 // попап
 function initPopupForm() {
     const contactBtn = document.querySelector('.contact-button');
@@ -264,5 +263,24 @@ if (popup && closeBtn && sendBtn && emailInput && responseMsg && forgotPasswordL
     });
 }
 
+function initRegisterFormValidation() {
+    const form = document.querySelector('.reg-form');
+    if (!form) return;
+
+    form.addEventListener('submit', function (e) {
+        const passwordInput = form.querySelector('input[name="password"]');
+        const confirmInput = form.querySelector('input[name="passwordConfirm"]');
+
+        const password = passwordInput.value.trim();
+        const confirmPassword = confirmInput.value.trim();
+
+        if (password !== confirmPassword) {
+            e.preventDefault();
+            alert('Пароли не совпадают');
+        }
+    });
+}
+
+initRegisterFormValidation();
 
 

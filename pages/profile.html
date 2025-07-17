@@ -146,8 +146,49 @@
     </div>
 
     <div id="footer"></div>
+
+    <div class="modal-overlay" id="modalOverlay" style="display: none;">
+        <div class="modal" id="modalWindow">
+            <div class="call-popup__close" id="modalClose">
+                <img src="../assets/images/popup-exit.png" alt="close">
+            </div>
+
+            <div class="modal-header" id="modalTitle">Введите новое значение</div>
+
+            <div id="modalInputs">
+                <input type="text" id="firstNameInput" class="modal-input" placeholder="Введите имя" />
+                <input type="text" id="lastNameInput" class="modal-input" placeholder="Введите фамилию" />
+
+                <div class="password-field">
+                    <input type="password" id="modalInput" class="modal-input" placeholder="Введите пароль"/>
+                    <button type="button" class="toggle-password" aria-label="Показать пароль">
+                        <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="password-field">
+                    <input type="password" id="confirmPasswordInput" class="modal-input" placeholder="Повторите пароль" />
+                    <button type="button" class="toggle-password" aria-label="Показать пароль">
+                        <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="modal-buttons">
+                <button id="modalSubmit">Изменить</button>
+                <button id="modalCancel">Отмена</button>
+            </div>
+        </div>
+    </div>
+    <div class="success-message" id="successMessage" style="display: none;">
+        Данные успешно изменены!
+    </div>
+
 </div>
 <script src="../js/index.js" defer></script>
+<script src="../js/profile.js" defer></script>
 <script src="../js/include.js"></script>
 </body>
 </html>
