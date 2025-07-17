@@ -20,6 +20,7 @@
 .btn-to-main-page {
     font-size: 20px;
     font-weight: normal;
+    color: #000000;
 }
 
 .btn-to-main-page:visited {
@@ -212,4 +213,54 @@ input {
 
 .btn-create:visited {
     color: #0085FF;
+}
+
+
+.modal-content {
+    background: #fff;
+    padding: 50px;
+    border-radius: 10px;
+    width: auto;
+    margin: 100px auto;
+    position: relative;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content p {
+    font-family: "Segoe UI", sans-serif;
+    font-weight: normal;
+    font-size: 20px;
+    text-align: center;
+}
+
+.modal-content input {
+    width: 300px;
+    margin-top: 30px;
+}
+
+.close-button {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+#send-recovery {
+    width: 250px;
+    margin-top: 30px;
+    height: 66px;
+    background: #0085FF;
+    color: #fff;
+    font-size: 23px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 10px;
 }

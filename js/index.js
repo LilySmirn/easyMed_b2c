@@ -209,3 +209,60 @@ function initPasswordToggle() {
 }
 
 initPasswordToggle();
+
+const popup = document.getElementById('forgot-password-popup');
+const closeBtn = popup?.querySelector('.call-popup__close');
+const sendBtn = document.getElementById('send-recovery');
+const emailInput = document.getElementById('recovery-email');
+const responseMsg = document.getElementById('response-message');
+
+const forgotPasswordLink = document.querySelector('.forgot-password');
+
+if (popup && closeBtn && sendBtn && emailInput && responseMsg && forgotPasswordLink) {
+    popup.addEventListener('click', (e) => {
+        if (e.target === popup) {
+            popup.classList.add('hidden');
+        }
+    });
+
+    forgotPasswordLink.addEventListener('click', function(e) {
+        e.preventDefault();
+        popup.classList.remove('hidden');
+        responseMsg.textContent = '';
+        emailInput.value = '';
+    });
+
+    closeBtn.addEventListener('click', () => {
+        popup.classList.add('hidden');
+    });
+
+    sendBtn.addEventListener('click', () => {
+        console.log('Кнопка отправки нажата');
+        const email = emailInput.value.trim();
+        if (!email) {
+            responseMsg.textContent = 'Введите email';
+            return;
+        }
+
+        fetch('/send-new-password', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ email })
+        })
+            .then(res => {
+                console.log('Ответ от сервера:', res);
+                return res.json();
+            })
+            .then(data => {
+                console.log('Данные:', data);
+                responseMsg.textContent = data.message || 'Новый пароль отправлен!';
+            })
+            .catch(err => {
+                console.error('Ошибка при fetch:', err);
+                responseMsg.textContent = 'Ошибка при отправке.';
+            });
+    });
+}
+
+
+

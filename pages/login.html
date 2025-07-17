@@ -70,6 +70,19 @@
         </div>
 
         <div id="footer"></div>
+
+        <div class="popup-overlay hidden" id="forgot-password-popup">
+            <div class="modal-content">
+                <div class="call-popup__close">
+                    <img src="../assets/images/popup-exit.png" alt="close">
+                </div>
+                <h2>Восстановление<br>пароля</h2>
+                <p>Введите вашу почту,<br>и мы вышлем новый пароль:</p>
+                <input type="email" id="recovery-email" placeholder="Введите email" required />
+                <button id="send-recovery">Отправить</button>
+                <p id="response-message"></p>
+            </div>
+        </div>
     </div>
     <script src="../js/index.js" defer></script>
     <script src="../js/include.js"></script>
