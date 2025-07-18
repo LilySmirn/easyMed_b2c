@@ -185,4 +185,42 @@ function initPasswordToggle() {
     });
 }
 
+document.addEventListener('DOMContentLoaded', () => {
+    const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+    const userData = JSON.parse(localStorage.getItem('userData'));
+
+    if (!isLoggedIn || !userData) {
+        window.location.href = 'reg.html';
+        return;
+    }
+
+    // Вставляем данные
+    const fullName = `${userData.lastName} ${userData.firstName}`;
+    const email = userData.email;
+    const passwordMasked = '*'.repeat(userData.password.length);
+
+    const nameTitle = document.querySelector('.profile-table-title');
+    const nameField = document.querySelector('.info-box-name .info-box-text');
+    const emailField = document.querySelector('.info-box-mail .info-box-text');
+    const passwordField = document.querySelector('.info-box-password .info-box-text');
+
+    if (nameTitle) nameTitle.textContent = fullName;
+    if (nameField) nameField.textContent = fullName;
+    if (emailField) emailField.textContent = email;
+    if (passwordField) passwordField.textContent = passwordMasked;
+
+    const logoutLink = document.querySelector('.logout-link');
+    if (logoutLink) {
+        logoutLink.addEventListener('click', function (e) {
+            e.preventDefault(); // отменяет обычный переход по ссылке
+
+            // Удаляем данные пользователя
+            localStorage.removeItem('userData');
+
+            // Перенаправляем на главную
+            window.location.href = '../index.html';
+        });
+    }
+});
+
 initPasswordToggle();

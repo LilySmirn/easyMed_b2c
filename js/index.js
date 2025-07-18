@@ -176,7 +176,6 @@ Email: ${email}
 
 initPopupForm();
 
-// глаз на строках с паролем
 function initPasswordToggle() {
     const toggleButtons = document.querySelectorAll('.toggle-password');
 
@@ -284,3 +283,59 @@ function initRegisterFormValidation() {
 initRegisterFormValidation();
 
 
+function handleLogin(event) {
+    event.preventDefault();
+
+    const email = document.getElementById('email').value.trim();
+    const password = document.getElementById('password').value.trim();
+
+    // Тестовые данные
+    const validEmail = "test@example.com";
+    const validPassword = "123456";
+
+    if (email === validEmail && password === validPassword) {
+        localStorage.setItem("isLoggedIn", "true");
+        localStorage.setItem('userData', JSON.stringify({
+            firstName: 'Тест',
+            lastName: 'Пользователь',
+            email: validEmail,
+            password: validPassword
+        }));
+        window.location.href = "profile.html";
+    } else {
+        showLoginError();
+    }
+}
+
+function showLoginError() {
+    alert("Неверный email или пароль");
+}
+
+const loginForm = document.querySelector('.login-form');
+if (loginForm) {
+    loginForm.addEventListener('submit', handleLogin);
+}
+
+document.querySelector('.reg-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const firstName = document.querySelector('input[name="firstName"]').value.trim();
+    const lastName = document.querySelector('input[name="lastName"]').value.trim();
+    const email = document.querySelector('input[name="email"]').value.trim();
+    const password = document.querySelector('input[name="password"]').value.trim();
+    const passwordConfirm = document.querySelector('input[name="passwordConfirm"]').value.trim();
+
+    if (password !== passwordConfirm) {
+        alert("Пароли не совпадают");
+        return;
+    }
+
+    localStorage.setItem('userData', JSON.stringify({
+        firstName,
+        lastName,
+        email,
+        password
+    }));
+
+    window.location.href = 'profile.html';
+});

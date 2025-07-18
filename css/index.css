@@ -966,9 +966,9 @@ html, body {
 .inn {
     display: flex;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
     flex-direction: column;
-    text-align: right;
+    text-align: center;
 }
 
 .copyright {
@@ -1547,5 +1547,12 @@ body.noscroll {
         padding: 20px;
         flex-direction: column;
         gap: 10px;
+    }
+
+    .footer-buttons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
     }
 }

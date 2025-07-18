@@ -46,9 +46,41 @@ function includeHTML(callback) {
     });
 }
 
+function initHeaderScripts() {
+    const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
+
+    const interval = setInterval(() => {
+        const loginButtons = document.querySelectorAll('.btn-login, .footer-btn-login');
+
+        if (loginButtons.length === 0) return;
+
+        clearInterval(interval);
+
+        loginButtons.forEach((btn, index) => {
+            const clonedBtn = btn.cloneNode(true);
+            btn.parentNode.replaceChild(clonedBtn, btn);
+
+            if (isLoggedIn) {
+                clonedBtn.textContent = "Выйти";
+                clonedBtn.href = "#";
+                clonedBtn.addEventListener("click", (e) => {
+                    e.preventDefault();
+                    localStorage.removeItem("isLoggedIn");
+                    localStorage.removeItem("userData");
+                    window.location.href = "/index.html";
+                });
+            } else {
+                clonedBtn.textContent = "Войти";
+                clonedBtn.href = window.location.pathname.includes("/pages/")
+                    ? "../pages/login.html"
+                    : "./pages/login.html";
+            }
+        });
+    }, 50);
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     includeHTML(() => {
-        // Здесь вызываем код, который зависит от загруженного header/footer
         initHeaderScripts();
     });
 });

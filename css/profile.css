@@ -373,3 +373,96 @@ input:checked + .slider::before {
     border: 1px solid red;
     background-color: #ffecec;
 }
+
+@media (max-width: 768px) {
+    .profile {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: auto;
+    }
+
+    .profile-title {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+    }
+
+    .logout-link {
+        text-align: center;
+        margin-left: 0;
+    }
+
+    .profile-title h2 {
+        position: static;
+        transform: none;
+    }
+
+    .profile-table-data {
+        flex-direction: column;
+    }
+
+    .personal-info, .tariff-info {
+        width: 300px;
+    }
+
+    .info-box-title {
+        display: none;
+    }
+
+    .info-box-value {
+        align-items: center;
+    }
+
+    .info-box-text {
+        font-size: 23px;
+        text-align: center;
+        font-weight: normal;
+        width: 280px;
+    }
+
+    .info-box-change {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .info-box-name, .info-box-mail, .info-box-password, .info-box-tariff, .info-box-duration, .info-box-auto {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .info-box-auto {
+        gap: 10px;
+    }
+
+    .info-box-value .info-box-text {
+        text-align: center;
+    }
+
+    .info-box-tariff .info-box-text, .info-box-duration .info-box-text, .info-box-switch {
+        justify-content: center;
+    }
+
+    .info-box-title-auto {
+        display: block;
+    }
+
+    .info-box-auto {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .tariff-info {
+        height: auto;
+        padding-top: 15px;
+    }
+
+    .open {
+        width: 300px;
+    }
+
+}
