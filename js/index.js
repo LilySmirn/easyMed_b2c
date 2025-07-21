@@ -130,7 +130,7 @@ function initPasswordToggle() {
 
     toggleButtons.forEach(button => {
         const svg = button.querySelector('svg');
-        const input = button.closest('.password-field')?.querySelector('input');
+        const input = button.parentElement.querySelector('input[type="password"], input[type="text"]');
 
         if (!svg || !input) return;
 
