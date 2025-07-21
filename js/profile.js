@@ -150,8 +150,30 @@ function showSuccess() {
 }
 
 function saveProfileData(type, value) {
-    console.log(`Сохраняем: ${type} = ${value}`);
-    localStorage.setItem(`profile_${type}`, value);
+    let userData = JSON.parse(localStorage.getItem('userData'));
+
+    if (!userData || typeof userData !== 'object') {
+        console.warn('userData отсутствует или повреждён, создаём новый');
+        userData = {
+            firstName: '',
+            lastName: '',
+            email: '',
+            password: ''
+        };
+    }
+
+    if (type === 'name') {
+        const [firstName, lastName] = value.split(' ');
+        userData.firstName = firstName || '';
+        userData.lastName = lastName || '';
+    } else if (type === 'email') {
+        userData.email = value;
+    } else if (type === 'password') {
+        userData.password = value;
+    }
+
+    localStorage.setItem('userData', JSON.stringify(userData));
+    console.log('[saveProfileData] Сохранено:', userData);
 }
 
 
@@ -185,19 +207,15 @@ function initPasswordToggle() {
     });
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+window.addEventListener('DOMContentLoaded', () => {
+    checkAuth(true);
     const userData = JSON.parse(localStorage.getItem('userData'));
 
-    if (!isLoggedIn || !userData) {
-        window.location.href = 'reg.html';
-        return;
-    }
+    if (!userData) return;
 
-    // Вставляем данные
-    const fullName = `${userData.lastName} ${userData.firstName}`;
+    const fullName = `${userData.firstName} ${userData.lastName}`;
     const email = userData.email;
-    const passwordMasked = '*'.repeat(userData.password.length);
+    const passwordMasked = '*'.repeat(userData.password?.length || 8);
 
     const nameTitle = document.querySelector('.profile-table-title');
     const nameField = document.querySelector('.info-box-name .info-box-text');
@@ -212,12 +230,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const logoutLink = document.querySelector('.logout-link');
     if (logoutLink) {
         logoutLink.addEventListener('click', function (e) {
-            e.preventDefault(); // отменяет обычный переход по ссылке
-
-            // Удаляем данные пользователя
+            e.preventDefault();
             localStorage.removeItem('userData');
-
-            // Перенаправляем на главную
+            localStorage.removeItem('isLoggedIn');
             window.location.href = '../index.html';
         });
     }

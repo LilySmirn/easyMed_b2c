@@ -1,86 +1,84 @@
 function includeHTML(callback) {
-    const pathToHeader = window.location.pathname.includes('/pages/') ? '../components/header.html' : './components/header.html';
-    const pathToFooter = window.location.pathname.includes('/pages/') ? '../components/footer.html' : './components/footer.html';
+    const pathToHeader = window.location.pathname.includes('/pages/')
+        ? '../components/header.html'
+        : './components/header.html';
+    const pathToFooter = window.location.pathname.includes('/pages/')
+        ? '../components/footer.html'
+        : './components/footer.html';
 
     const headerEl = document.getElementById('header');
     const footerEl = document.getElementById('footer');
 
+    const loadComponent = (el, path) => {
+        return fetch(path)
+            .then(res => {
+                if (!res.ok) throw new Error(`Ошибка загрузки: ${path}`);
+                return res.text();
+            })
+            .then(html => {
+                el.innerHTML = html;
+            })
+            .catch(err => {
+                el.innerHTML = "<p>Ошибка загрузки компонента</p>";
+                console.error(err);
+            });
+    };
+
     const promises = [];
-
-    if (headerEl) {
-        const headerPromise = fetch(pathToHeader)
-            .then(response => {
-                if (!response.ok) throw new Error('Ошибка загрузки header');
-                return response.text();
-            })
-            .then(data => {
-                headerEl.innerHTML = data;
-            })
-            .catch(error => {
-                headerEl.innerHTML = "<p>Не удалось загрузить шапку</p>";
-                console.error(error);
-            });
-        promises.push(headerPromise);
-    }
-
-    if (footerEl) {
-        const footerPromise = fetch(pathToFooter)
-            .then(response => {
-                if (!response.ok) throw new Error('Ошибка загрузки footer');
-                return response.text();
-            })
-            .then(data => {
-                footerEl.innerHTML = data;
-            })
-            .catch(error => {
-                footerEl.innerHTML = "<p>Не удалось загрузить подвал</p>";
-                console.error(error);
-            });
-        promises.push(footerPromise);
-    }
+    if (headerEl) promises.push(loadComponent(headerEl, pathToHeader));
+    if (footerEl) promises.push(loadComponent(footerEl, pathToFooter));
 
     Promise.all(promises).then(() => {
-        if (typeof callback === 'function') {
-            callback();
-        }
+        if (typeof callback === 'function') callback();
+        initHeaderAuthLogic(); // <-- Подключаем после отрисовки
     });
 }
 
-function initHeaderScripts() {
+// 💡 Основная логика входа/выхода
+function initHeaderAuthLogic() {
     const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
+    const userData = JSON.parse(localStorage.getItem("userData") || "null");
 
-    const interval = setInterval(() => {
+    const checkButtons = () => {
         const loginButtons = document.querySelectorAll('.btn-login, .footer-btn-login');
 
-        if (loginButtons.length === 0) return;
+        loginButtons.forEach(btn => {
+            const clone = btn.cloneNode(true);
+            btn.parentNode.replaceChild(clone, btn);
 
-        clearInterval(interval);
-
-        loginButtons.forEach((btn, index) => {
-            const clonedBtn = btn.cloneNode(true);
-            btn.parentNode.replaceChild(clonedBtn, btn);
-
-            if (isLoggedIn) {
-                clonedBtn.textContent = "Выйти";
-                clonedBtn.href = "#";
-                clonedBtn.addEventListener("click", (e) => {
+            if (isLoggedIn && userData) {
+                clone.textContent = "Выйти";
+                clone.href = "#";
+                clone.addEventListener("click", (e) => {
                     e.preventDefault();
                     localStorage.removeItem("isLoggedIn");
                     localStorage.removeItem("userData");
                     window.location.href = "/index.html";
                 });
             } else {
-                clonedBtn.textContent = "Войти";
-                clonedBtn.href = window.location.pathname.includes("/pages/")
+                clone.textContent = "Войти";
+                clone.href = window.location.pathname.includes("/pages/")
                     ? "../pages/login.html"
                     : "./pages/login.html";
             }
         });
-    }, 50);
+    };
+
+    // Небольшая задержка на всякий случай
+    setTimeout(checkButtons, 100);
 }
 
+// 🛡 Проверка авторизации на защищённых страницах
+function checkAuth(required = false) {
+    const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
+    const userData = localStorage.getItem("userData");
+
+    if (required && (!isLoggedIn || !userData)) {
+        window.location.href = "/pages/login.html";
+    }
+}
+
+// Автоматическая инициализация
 document.addEventListener('DOMContentLoaded', () => {
-    includeHTML(() => {
-        initHeaderScripts();
-    });
+    includeHTML();
 });
