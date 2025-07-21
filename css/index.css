@@ -1108,6 +1108,14 @@ body.noscroll {
     background-color: #ffecec;
 }
 
+.open-footer {
+    color: #ffffff;
+    border: none;
+}
+
+.open-footer:hover {
+   color: #99CEFF;
+}
 
 
 @media (max-width: 768px) {
